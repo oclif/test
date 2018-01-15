@@ -18,13 +18,13 @@
     "ts-node": "^4.1.0"
   },
   "devDependencies": {
-    "@dxcli/dev": "^1.0.0",
+    "@dxcli/dev": "^1.1.2",
     "@dxcli/dev-semantic-release": "^0.0.3",
-    "@dxcli/dev-tslint": "^0.0.6",
+    "@dxcli/dev-test": "^0.0.1",
+    "@dxcli/dev-tslint": "^0.0.8",
     "@types/node": "^9.3.0",
-    "del-cli": "^1.1.0",
     "eslint": "^4.15.0",
-    "eslint-config-dxcli": "^1.1.2",
+    "eslint-config-dxcli": "^1.1.4",
     "husky": "^0.14.3",
     "mocha": "^4.1.0",
     "nyc": "^11.4.1",
@@ -34,16 +34,16 @@
     "workflows": {
       "test": [
         "eslint .",
-        "tsc",
-        "tslint -p .",
-        "commitlint --from master",
+        "tsc -p test --noEmit",
+        "tslint -p test",
+        "commitlint --from origin/master",
         "mocha \"test/**/*.ts\""
       ],
       "lint": [
         "eslint .",
-        "tsc",
-        "tslint -p .",
-        "commitlint --from master"
+        "tsc -p test --noEmit",
+        "tslint -p test",
+        "commitlint --from origin/master"
       ]
     }
   },
@@ -60,7 +60,7 @@
     "commitmsg": "dxcli-dev-commitmsg",
     "lint": "dxcli-dev lint",
     "precommit": "dxcli-dev test",
-    "prepare": "del-cli lib && tsc",
+    "prepare": "rm -rf lib && tsc",
     "test": "dxcli-dev test"
   },
   "types": "lib/index.d.ts"

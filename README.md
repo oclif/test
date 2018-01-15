@@ -1,6 +1,8 @@
 @dxcli/dev-test
 ===============
 
+test helpers for dxcli components
+
 [![Version](https://img.shields.io/npm/v/@dxcli/dev-test.svg)](https://npmjs.org/package/@dxcli/dev-test)
 [![CircleCI](https://circleci.com/gh/dxcli/dev-test/tree/master.svg?style=svg)](https://circleci.com/gh/dxcli/dev-test/tree/master)
 [![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/dxcli/dev-test?branch=master&svg=true)](https://ci.appveyor.com/project/heroku/dev-test/branch/master)

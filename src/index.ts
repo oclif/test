@@ -36,85 +36,94 @@ interface Options {
   only?: boolean
   skip?: boolean
   print?: boolean
-  env?: {[k: string]: string}
+  mock?: [any, string, any][]
 }
 
-export interface Describe {
-  (description: string, cb: (this: mocha.ISuiteCallbackContext) => void): mocha.ISuite
-  stdout: Describe
-  stderr: Describe
-  only: Describe
-  skip: Describe
-  print: Describe
-  env(env?: {[k: string]: string}): Describe
+export interface Settings<T, U> {
+  (description: string, cb: (this: T) => void): U
+  stdout: Settings<T, U>
+  stderr: Settings<T, U>
+  only: Settings<T, U>
+  skip: Settings<T, U>
+  print: Settings<T, U>
+  mock(object: any, path: string, value: any): Settings<T, U>
+  env(env?: {[k: string]: string}): Settings<T, U>
 }
+
+export type Describe = Settings<mocha.ISuiteCallbackContext, mocha.ISuite>
+export type It = Settings<mocha.ITestCallbackContext, mocha.ITest>
 
 const env = process.env
 
+function hooks(options: Options) {
+  options.mock!.forEach(([object, path, value]) => {
+    const desc = ['mock', path].join(':')
+    const orig = _.get(object, path)
+    beforeEach(desc, () => _.set(object, path, value))
+    afterEach(desc, () => _.set(object, path, orig))
+  })
+
+  // always reset process.env no matter what
+  afterEach('resetEnv', () => process.env = env)
+  // always reset stdMocks
+  afterEach('std-mocks', () => stdMocks.restore())
+
+  if (options.stdout || options.stderr) {
+    const desc = _([options.stdout && 'stdout', options.stderr && 'stderr']).compact().join(':')
+    beforeEach(desc, () => stdMocks.use(options))
+  }
+}
+
+const settings = (builder: any, opts: Options) => {
+  const prop = (name: string, value: any): PropertyDescriptor => {
+    const prop: PropertyDescriptor = {enumerable: true}
+    if (typeof value === 'function') {
+      prop.value = (...args: any[]) => builder({...opts, [name]: value(...args)})
+    } else {
+      prop.get = () => builder({...opts, [name]: value})
+    }
+    return prop
+  }
+  const mock = opts.mock = opts.mock || []
+
+  return {
+    print: prop('print', true),
+    stdout: prop('stdout', true),
+    stderr: prop('stderr', true),
+    only: prop('only', true),
+    skip: prop('skip', true),
+    env: prop('mock', (env: {[k: string]: string} = {}) => mock.concat(Object.entries(env).map(([k, v]) => [process.env, k, v] as [any, string, any]))),
+    mock: prop('mock', (object: any, path: string, value: any) => mock.concat([[object, path, value]])),
+  }
+}
+
 const __describe = (options: Options = {}): Describe => {
-  _.defaults(options, {
-    stdout: false,
-    stderr: false,
-    print: false,
-    only: false,
-    skip: false,
-  })
-
   return Object.defineProperties((description: string, cb: (this: mocha.ISuiteCallbackContext) => void) => {
-    let thisSuite: any = describe
-    if (options.only) thisSuite = describe.only
-    if (options.skip) thisSuite = describe.skip
-
-    return thisSuite(description, function (this: mocha.ISuiteCallbackContext) {
-      if (options.env) {
-        beforeEach(() => {
-          process.env = {}
-        })
-      }
-
-      // always reset process.env no matter what
-      afterEach(() => {
-        process.env = env
+    return ((options.only && describe.only) || (options.skip && describe.skip) || describe)(
+      description,
+      function (this: mocha.ISuiteCallbackContext) {
+        hooks(options)
+        cb.call(this)
       })
+  }, settings(__describe, options))
+}
 
-      if (options.stdout || options.stderr) {
-        beforeEach(() => {
-          stdMocks.use(options)
-        })
-        afterEach(() => {
-          stdMocks.restore()
-        })
-      }
-      cb.call(this)
-    })
-  }, {
-    print: {
-      enumerable: true,
-      get: () => __describe({...options, print: true})
-    },
-    stdout: {
-      enumerable: true,
-      get: () => __describe({...options, stdout: true})
-    },
-    stderr: {
-      enumerable: true,
-      get: () => __describe({...options, stderr: true})
-    },
-    only: {
-      enumerable: true,
-      get: () => __describe({...options, only: true})
-    },
-    skip: {
-      enumerable: true,
-      get: () => __describe({...options, skip: true})
-    },
-    env: {
-      enumerable: true,
-      value: (env: {[k: string]: string} = {}) => __describe({...options, env})
-    },
-  })
+const __it = (options: Options = {}): It => {
+  return Object.defineProperties((expectation: string, cb: (this: mocha.ITestCallbackContext) => void) => {
+    return ((options.only && it.only) || (options.skip && it.skip) || it)(
+      expectation,
+      async function (this: mocha.ITestCallbackContext) {
+        hooks(options)
+        await cb.call(this)
+        stdMocks.restore()
+      })
+  }, settings(__it, options))
 }
 
 const _describe = __describe()
+const _it = __it()
 
-export {_describe as describe}
+export {
+  _describe as describe,
+  _it as it,
+}
