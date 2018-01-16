@@ -1,3 +1,11 @@
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/dxcli/dev-test/compare/4d45e11aebd9a69549aefdc54fa15ebb2ddf24f0...v0.2.1) (2018-01-16)
+
+
+### Bug Fixes
+
+* flush stdmock after tests ([6384b05](https://github.com/dxcli/dev-test/commit/6384b05))
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/dxcli/dev-test/compare/98bf3a1dd7346d4d8d71fa9c943dc2c23f0171ff...v0.2.0) (2018-01-16)
 
