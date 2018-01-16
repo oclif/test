@@ -73,6 +73,7 @@ function hooks(options: Options) {
       mocks.forEach(([object, path, , original]) => _.set(object, path, original))
       process.env = env
       stdMocks.restore()
+      stdMocks.flush()
     },
   }
 }
