@@ -37,6 +37,7 @@ interface Options {
   skip?: boolean
   print?: boolean
   mock?: [any, string, any][]
+  env?: {[k: string]: string}
 }
 
 export interface Settings<T, U> {
@@ -56,21 +57,20 @@ export type It = Settings<mocha.ITestCallbackContext, mocha.ITest>
 const env = process.env
 
 function hooks(options: Options) {
-  options.mock!.forEach(([object, path, value]) => {
-    const desc = ['mock', path].join(':')
-    const orig = _.get(object, path)
-    beforeEach(desc, () => _.set(object, path, value))
-    afterEach(desc, () => _.set(object, path, orig))
-  })
-
-  // always reset process.env no matter what
-  afterEach('resetEnv', () => process.env = env)
-  // always reset stdMocks
-  afterEach('std-mocks', () => stdMocks.restore())
-
-  if (options.stdout || options.stderr) {
-    const desc = _([options.stdout && 'stdout', options.stderr && 'stderr']).compact().join(':')
-    beforeEach(desc, () => stdMocks.use(options))
+  const mocks = (options.mock || []).map(m => [...m, _.get(m[0], m[1])])
+  return {
+    before() {
+      mocks.forEach(([object, path, value]) => _.set(object, path, value))
+      if (options.env) process.env = options.env
+      if (options.stdout || options.stderr) {
+        stdMocks.use({stdout: !!options.stdout, stderr: !!options.stderr, print: !!options.print})
+      }
+    },
+    after() {
+      mocks.forEach(([object, path, , original]) => _.set(object, path, original))
+      process.env = env
+      stdMocks.restore()
+    },
   }
 }
 
@@ -92,7 +92,7 @@ const settings = (builder: any, opts: Options) => {
     stderr: prop('stderr', true),
     only: prop('only', true),
     skip: prop('skip', true),
-    env: prop('mock', (env: {[k: string]: string} = {}) => mock.concat(Object.entries(env).map(([k, v]) => [process.env, k, v] as [any, string, any]))),
+    env: prop('env', (env: {[k: string]: string} = {}) => env),
     mock: prop('mock', (object: any, path: string, value: any) => mock.concat([[object, path, value]])),
   }
 }
@@ -102,7 +102,9 @@ const __describe = (options: Options = {}): Describe => {
     return ((options.only && describe.only) || (options.skip && describe.skip) || describe)(
       description,
       function (this: mocha.ISuiteCallbackContext) {
-        hooks(options)
+        let {before, after} = hooks(options)
+        beforeEach(before)
+        afterEach(after)
         cb.call(this)
       })
   }, settings(__describe, options))
@@ -113,9 +115,10 @@ const __it = (options: Options = {}): It => {
     return ((options.only && it.only) || (options.skip && it.skip) || it)(
       expectation,
       async function (this: mocha.ITestCallbackContext) {
-        hooks(options)
+        let {before, after} = hooks(options)
+        before()
         await cb.call(this)
-        stdMocks.restore()
+        after()
       })
   }, settings(__it, options))
 }

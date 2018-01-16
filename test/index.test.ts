@@ -38,6 +38,12 @@ os.forEach(os => {
 
 describe.env({foo: 'bar'})('mock env', () => {
   it('gets env', () => {
-    expect(process.env).to.include({foo: 'bar'})
+    expect(process.env).to.deep.equal({foo: 'bar'})
+  })
+  it.env({foo: 'baz'})('gets env from it', () => {
+    expect(process.env).to.deep.equal({foo: 'baz'})
+  })
+  it.env()('clears env', () => {
+    expect(process.env).to.deep.equal({})
   })
 })
