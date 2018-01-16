@@ -47,3 +47,9 @@ describe.env({foo: 'bar'})('mock env', () => {
     expect(process.env).to.deep.equal({})
   })
 })
+
+describe('chai-as-promised', () => {
+  it('eventually expects', async () => {
+    await expect(Promise.resolve('foo')).to.eventually.equal('foo')
+  })
+})

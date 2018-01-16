@@ -1,9 +1,12 @@
 // tslint:disable no-namespace
 
+import * as chai from 'chai'
+import * as chaiAsPromised from 'chai-as-promised'
 import * as _ from 'lodash'
 import * as mocha from 'mocha'
 import stripAnsi = require('strip-ansi')
-export {expect} from 'chai'
+
+chai.use(chaiAsPromised)
 
 const stdMocks = require('std-mocks')
 
@@ -125,8 +128,10 @@ const __it = (options: Options = {}): It => {
 
 const _describe = __describe()
 const _it = __it()
+const expect = chai.expect
 
 export {
   _describe as describe,
   _it as it,
+  expect,
 }
