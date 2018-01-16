@@ -1,3 +1,11 @@
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/dxcli/dev-test/compare/77aff3b2da0b9e72548d6584128dbe6bb56e39e4...v0.1.2) (2018-01-16)
+
+
+### Bug Fixes
+
+* fixed it before/after filters ([98bf3a1](https://github.com/dxcli/dev-test/commit/98bf3a1))
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/dxcli/dev-test/compare/d0c1e97a377cb47071d387ed38e2b905437c3d80...v0.1.1) (2018-01-16)
 
