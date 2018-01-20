@@ -1,3 +1,12 @@
+<a name="0.4.1"></a>
+## [0.4.1](https://github.com/dxcli/dev-test/compare/39bc87761d4cce79d38ed69a66592ac499d6347e...v0.4.1) (2018-01-20)
+
+
+### Bug Fixes
+
+* added sourceMap ([e17e4aa](https://github.com/dxcli/dev-test/commit/e17e4aa))
+* updated dependencies ([28b9e3b](https://github.com/dxcli/dev-test/commit/28b9e3b))
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/dxcli/dev-test/compare/bbe7683a7e6eb0c27e387e9d085dae0f669fb867...v0.4.0) (2018-01-20)
 
