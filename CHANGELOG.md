@@ -1,3 +1,11 @@
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/dxcli/dev-test/compare/5b214ad519747c8e999dae7ae809b680c4373f63...v0.7.0) (2018-01-20)
+
+
+### Features
+
+* added error to hook callback ([036ec31](https://github.com/dxcli/dev-test/commit/036ec31))
+
 <a name="0.6.1"></a>
 ## [0.6.1](https://github.com/dxcli/dev-test/compare/e5f9a87977d3d7cc901297874b0135def95362d2...v0.6.1) (2018-01-20)
 
