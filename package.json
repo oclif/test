@@ -5,7 +5,7 @@
   "author": "Jeff Dickey @jdxcode",
   "dependencies": {
     "@dxcli/dev-nyc-config": "^0.0.3",
-    "@dxcli/engine": "^0.0.1",
+    "@dxcli/engine": "^0.1.0",
     "@types/ansi-styles": "^2.0.30",
     "@types/chai": "^4.1.1",
     "@types/chai-as-promised": "^7.1.0",
