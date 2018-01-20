@@ -4,7 +4,6 @@ import * as chai from 'chai'
 import * as chaiAsPromised from 'chai-as-promised'
 import * as _ from 'lodash'
 import * as mocha from 'mocha'
-export * from './command'
 import stripAnsi = require('strip-ansi')
 
 chai.use(chaiAsPromised)
@@ -138,3 +137,6 @@ export {
   _it as it,
   expect,
 }
+
+export * from './command'
+export * from './hook'

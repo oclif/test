@@ -139,6 +139,16 @@
     lodash "^4.17.4"
     read-pkg "^3.0.0"
 
+"@dxcli/config@^0.1.18":
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/@dxcli/config/-/config-0.1.18.tgz#2f8fed892f824a65e5dc5ac8d3fdce7c3150aee6"
+  dependencies:
+    debug "^3.1.0"
+    fs-extra "^5.0.0"
+    load-json-file "^4.0.0"
+    lodash "^4.17.4"
+    read-pkg "^3.0.0"
+
 "@dxcli/dev-commitmsg@^0.0.3":
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@dxcli/dev-commitmsg/-/dev-commitmsg-0.0.3.tgz#8941971c9778b675dd14c407c1123b8bef397757"
@@ -183,12 +193,12 @@
     read-pkg-up "^3.0.0"
     supports-color "^5.1.0"
 
-"@dxcli/engine@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@dxcli/engine/-/engine-0.0.1.tgz#7ea281102ff53186836488cded490e446a61ebc2"
+"@dxcli/engine@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@dxcli/engine/-/engine-0.1.0.tgz#7006bae7e8e5267e8e6338671f1d6d5870e53fc6"
   dependencies:
     "@dxcli/command" "^0.1.9"
-    "@dxcli/config" "^0.1.17"
+    "@dxcli/config" "^0.1.18"
     "@dxcli/loader" "^0.0.5"
     cli-ux "^3.1.0"
     rxjs "^5.5.6"

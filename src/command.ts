@@ -2,7 +2,7 @@ import run from '@dxcli/engine'
 
 import {expect, it, output} from '.'
 
-export interface RunCommandOptions {
+export interface TestCommandOptions {
   description?: string
   stdout?: string
   stderr?: string
@@ -10,7 +10,7 @@ export interface RunCommandOptions {
   root?: string
 }
 
-export const testCommand = (args: string[], opts: RunCommandOptions) => {
+export const testCommand = (args: string[], opts: TestCommandOptions) => {
   const description = opts.description || args[0]
   let test = it
   if (opts.stdout) test = test.stdout
