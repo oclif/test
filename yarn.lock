@@ -106,18 +106,18 @@
   dependencies:
     find-up "^2.1.0"
 
-"@dxcli/command@^0.1.10", "@dxcli/command@^0.1.9":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@dxcli/command/-/command-0.1.10.tgz#cb5805ca3fe1d7af59af653c96388c9df64f25cc"
+"@dxcli/command@^0.1.10":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@dxcli/command/-/command-0.1.11.tgz#47337cb261e563a372d2a6d02676000a204b7be1"
   dependencies:
-    "@dxcli/config" "^0.1.18"
+    "@dxcli/config" "^0.1.20"
     "@dxcli/parser" "^0.0.2"
     "@dxcli/screen" "^0.0.0"
-    cli-ux "^3.1.2"
+    cli-ux "^3.1.3"
     debug "^3.1.0"
     http-call "^5.0.1"
 
-"@dxcli/config@^0.1.17", "@dxcli/config@^0.1.18", "@dxcli/config@^0.1.20":
+"@dxcli/config@^0.1.20":
   version "0.1.20"
   resolved "https://registry.yarnpkg.com/@dxcli/config/-/config-0.1.20.tgz#e344d15818876663505ef7adbf71afb23a89323b"
   dependencies:
@@ -201,13 +201,13 @@
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/@dxcli/screen/-/screen-0.0.0.tgz#a85f69bfb00d3961656bad5d7b12f8e603c7ce09"
 
-"@dxcli/version@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@dxcli/version/-/version-0.1.2.tgz#21891976cd57be55bf99d85388d959483d023ea8"
+"@dxcli/version@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@dxcli/version/-/version-0.1.3.tgz#031a0d19346b41f00794d2cf4cf972183572383c"
   dependencies:
-    "@dxcli/command" "^0.1.9"
-    "@dxcli/config" "^0.1.17"
-    cli-ux "^3.1.0"
+    "@dxcli/command" "^0.1.10"
+    "@dxcli/config" "^0.1.20"
+    cli-ux "^3.1.2"
 
 "@heroku-cli/color@^1.0.4":
   version "1.1.1"
@@ -934,9 +934,9 @@ cli-ux@^2.0.21:
     supports-color "^5.1.0"
     ts-lodash "^4.0.8"
 
-cli-ux@^3.1.0, cli-ux@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-3.1.2.tgz#4a273fbb24ad2390d653f1a12c047c4f39deb810"
+cli-ux@^3.1.2, cli-ux@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-3.1.3.tgz#2ec39244aacc636ca329443884e4c5f825b796d8"
   dependencies:
     "@dxcli/screen" "^0.0.0"
     "@heroku/linewrap" "^1.0.0"
