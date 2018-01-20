@@ -1,3 +1,11 @@
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/dxcli/dev-test/compare/0ccdabed9721ba044e8d5a75db391c0f126d6e54...v0.5.0) (2018-01-20)
+
+
+### Features
+
+* added testCommand callback ([016ca5e](https://github.com/dxcli/dev-test/commit/016ca5e))
+
 <a name="0.4.4"></a>
 ## [0.4.4](https://github.com/dxcli/dev-test/compare/c9d091091f0faeb52d11fd3897c22de413634bd5...v0.4.4) (2018-01-20)
 
