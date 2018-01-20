@@ -1,3 +1,11 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/dxcli/dev-test/compare/8ef663ff285bd3a65d2f8e6520a3b56ac8b48d7e...v0.3.0) (2018-01-20)
+
+
+### Features
+
+* added testCommand ([bbe7683](https://github.com/dxcli/dev-test/commit/bbe7683))
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/dxcli/dev-test/compare/6384b05e572a67a8ac9df47c2d1824015ada6e4a...v0.2.2) (2018-01-19)
 

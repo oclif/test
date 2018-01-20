@@ -1,7 +1,7 @@
 {
   "name": "@dxcli/dev-test",
   "description": "test helpers for dxcli components",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "author": "Jeff Dickey @jdxcode",
   "dependencies": {
     "@dxcli/dev-nyc-config": "^0.0.3",
