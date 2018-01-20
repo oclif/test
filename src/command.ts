@@ -24,7 +24,7 @@ export const testCommand: TestCommand = (
   opts: TestCommandOptions,
   fn?: TestCommandCallback<any>
 ) => {
-  const description = opts.description || args[0]
+  const description = opts.description || args.join(' ')
   let test = it
   if (opts.stdout) test = test.stdout
   if (opts.stderr) test = test.stderr
