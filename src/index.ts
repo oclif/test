@@ -4,6 +4,7 @@ import * as chai from 'chai'
 import * as chaiAsPromised from 'chai-as-promised'
 import * as _ from 'lodash'
 import * as mocha from 'mocha'
+export * from './command'
 import stripAnsi = require('strip-ansi')
 
 chai.use(chaiAsPromised)
@@ -60,6 +61,7 @@ export type It = Settings<mocha.ITestCallbackContext, mocha.ITest>
 const env = process.env
 
 function hooks(options: Options) {
+  if (process.env.SHOW_OUTPUT === '1') options.print = true
   const mocks = (options.mock || []).map(m => [...m, _.get(m[0], m[1])])
   return {
     before() {
