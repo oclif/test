@@ -1,3 +1,11 @@
+<a name="0.4.3"></a>
+## [0.4.3](https://github.com/dxcli/dev-test/compare/306c3ee9d27460a56bf3be1d9f31ea8e14084a23...v0.4.3) (2018-01-20)
+
+
+### Bug Fixes
+
+* exit code check ([c9d0910](https://github.com/dxcli/dev-test/commit/c9d0910))
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://github.com/dxcli/dev-test/compare/28b9e3b1cde70174831a2d175f6d7c542e59fb72...v0.4.2) (2018-01-20)
 
