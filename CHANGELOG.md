@@ -1,3 +1,11 @@
+<a name="0.5.2"></a>
+## [0.5.2](https://github.com/dxcli/dev-test/compare/b578460b88d0c4079d4749ecaaf2a35796715d3c...v0.5.2) (2018-01-20)
+
+
+### Bug Fixes
+
+* updated deps ([3dabf24](https://github.com/dxcli/dev-test/commit/3dabf24))
+
 <a name="0.5.1"></a>
 ## [0.5.1](https://github.com/dxcli/dev-test/compare/016ca5eba672058d70bf9bff6df64653ac29f3cd...v0.5.1) (2018-01-20)
 
