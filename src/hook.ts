@@ -34,8 +34,17 @@ export const testHook: TestHook = (
     const engine = new Engine()
     await engine.load(opts.root || module.parent!.parent!.filename)
     const run = () => engine.runHook(event, hookOpts)
-    if (typeof opts.exit === 'number') await expect(run()).to.be.rejectedWith(`EEXIT: ${opts.exit}`)
-    else await run()
+    if (typeof opts.exit === 'number') {
+      try {
+        await run()
+        throw new Error(`Expected hook to exit with code ${opts.exit} but it ran without exiting`)
+      } catch (err) {
+        if (!err['cli-ux'] || typeof err['cli-ux'].exit !== 'number') throw err
+        if (err['cli-ux'].exit !== opts.exit) {
+          throw new Error(`Expected hook to exit with ${opts.exit} but exited with ${err['cli-ux'].exit}`)
+        }
+      }
+    } else await run()
     if (typeof opts.stdout === 'string') expect(output.stdout).to.equal(opts.stdout)
     if (typeof opts.stderr === 'string') expect(output.stderr).to.equal(opts.stderr)
     if (!fn) return
