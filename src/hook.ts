@@ -5,13 +5,27 @@ import {expect, it, output} from '.'
 
 export interface TestHookOptions {
   description?: string
-  stdout?: string
-  stderr?: string
+  stdout?: string | boolean
+  stderr?: string | boolean
   exit?: number
   root?: string
 }
 
-export const testHook = (event: string, hookOpts: object = {}, opts: TestHookOptions = {}) => {
+export type TestHookCallback<T> = (output: T) => Promise<void> | void
+
+export interface TestHook {
+  (event: string, hookOpts: object, opts: TestHookOptions & {stdout: true, stderr: true}, fn: TestHookCallback<{stdout: string, stderr: string}>): void
+  (event: string, hookOpts: object, opts: TestHookOptions & {stdout: true}, fn: TestHookCallback<{stdout: string}>): void
+  (event: string, hookOpts: object, opts: TestHookOptions & {stderr: true}, fn: TestHookCallback<{stderr: string}>): void
+  (event: string, hookOpts?: object, opts?: TestHookOptions, fn?: TestHookCallback<{}>): void
+}
+
+export const testHook: TestHook = (
+  event: string,
+  hookOpts: object = {},
+  opts: TestHookOptions = {},
+  fn?: TestHookCallback<any>,
+) => {
   const description = opts.description || `run hook with opts: ${inspect(hookOpts)}`
   let test = it
   if (opts.stdout) test = test.stdout
@@ -22,7 +36,12 @@ export const testHook = (event: string, hookOpts: object = {}, opts: TestHookOpt
     const run = () => engine.runHook(event, hookOpts)
     if (typeof opts.exit === 'number') await expect(run()).to.be.rejectedWith(`EEXIT: ${opts.exit}`)
     else await run()
-    if (opts.stdout) expect(output.stdout).to.equal(opts.stdout)
-    if (opts.stderr) expect(output.stderr).to.equal(opts.stderr)
+    if (typeof opts.stdout === 'string') expect(output.stdout).to.equal(opts.stdout)
+    if (typeof opts.stderr === 'string') expect(output.stderr).to.equal(opts.stderr)
+    if (!fn) return
+    let o: any = {}
+    if (opts.stdout) o.stdout = output.stdout
+    if (opts.stderr) o.stderr = output.stderr
+    await fn(o)
   })
 }
