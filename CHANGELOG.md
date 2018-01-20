@@ -1,3 +1,11 @@
+<a name="0.6.1"></a>
+## [0.6.1](https://github.com/dxcli/dev-test/compare/e5f9a87977d3d7cc901297874b0135def95362d2...v0.6.1) (2018-01-20)
+
+
+### Bug Fixes
+
+* better exit error handling ([5b214ad](https://github.com/dxcli/dev-test/commit/5b214ad))
+
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/dxcli/dev-test/compare/9606dddb2a1420ee0384b27f5c84c3c73d2e161e...v0.6.0) (2018-01-20)
 
