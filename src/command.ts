@@ -4,13 +4,26 @@ import {expect, it, output} from '.'
 
 export interface TestCommandOptions {
   description?: string
-  stdout?: string
-  stderr?: string
+  stdout?: string | boolean
+  stderr?: string | boolean
   exit?: number
   root?: string
 }
 
-export const testCommand = (args: string[], opts: TestCommandOptions) => {
+export type TestCommandCallback<T> = (output: T) => Promise<void> | void
+
+export interface TestCommand {
+  (args: string[], opts: TestCommandOptions & {stdout: true, stderr: true}, fn: TestCommandCallback<{stdout: string, stderr: string}>): void
+  (args: string[], opts: TestCommandOptions & {stdout: true}, fn: TestCommandCallback<{stdout: string}>): void
+  (args: string[], opts: TestCommandOptions & {stderr: true}, fn: TestCommandCallback<{stderr: string}>): void
+  (args: string[], opts: TestCommandOptions, fn?: TestCommandCallback<{}>): void
+}
+
+export const testCommand: TestCommand = (
+  args: string[],
+  opts: TestCommandOptions,
+  fn?: TestCommandCallback<any>
+) => {
   const description = opts.description || args[0]
   let test = it
   if (opts.stdout) test = test.stdout
@@ -25,7 +38,12 @@ export const testCommand = (args: string[], opts: TestCommandOptions) => {
         throw new Error(`Expected exit code to be ${exit} but got ${err['cli-ux'].exit}`)
       }
     }
-    if (opts.stdout) expect(output.stdout).to.equal(opts.stdout)
-    if (opts.stderr) expect(output.stderr).to.equal(opts.stderr)
+    if (typeof opts.stdout === 'string') expect(output.stdout).to.equal(opts.stdout)
+    if (typeof opts.stderr === 'string') expect(output.stderr).to.equal(opts.stderr)
+    if (!fn) return
+    let o: any = {}
+    if (opts.stdout) o.stdout = output.stdout
+    if (opts.stderr) o.stderr = output.stderr
+    await fn(o)
   })
 }
