@@ -1,3 +1,11 @@
+<a name="0.4.4"></a>
+## [0.4.4](https://github.com/dxcli/dev-test/compare/c9d091091f0faeb52d11fd3897c22de413634bd5...v0.4.4) (2018-01-20)
+
+
+### Bug Fixes
+
+* bump engine ([0ccdabe](https://github.com/dxcli/dev-test/commit/0ccdabe))
+
 <a name="0.4.3"></a>
 ## [0.4.3](https://github.com/dxcli/dev-test/compare/306c3ee9d27460a56bf3be1d9f31ea8e14084a23...v0.4.3) (2018-01-20)
 
