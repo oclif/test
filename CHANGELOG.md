@@ -1,3 +1,11 @@
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/dxcli/dev-test/compare/bbe7683a7e6eb0c27e387e9d085dae0f669fb867...v0.4.0) (2018-01-20)
+
+
+### Features
+
+* added testHook ([39bc877](https://github.com/dxcli/dev-test/commit/39bc877))
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/dxcli/dev-test/compare/8ef663ff285bd3a65d2f8e6520a3b56ac8b48d7e...v0.3.0) (2018-01-20)
 
