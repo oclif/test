@@ -1,3 +1,11 @@
+<a name="0.5.1"></a>
+## [0.5.1](https://github.com/dxcli/dev-test/compare/016ca5eba672058d70bf9bff6df64653ac29f3cd...v0.5.1) (2018-01-20)
+
+
+### Bug Fixes
+
+* show all args ([b578460](https://github.com/dxcli/dev-test/commit/b578460))
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/dxcli/dev-test/compare/0ccdabed9721ba044e8d5a75db391c0f126d6e54...v0.5.0) (2018-01-20)
 
