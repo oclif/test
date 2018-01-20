@@ -1,3 +1,11 @@
+<a name="0.4.2"></a>
+## [0.4.2](https://github.com/dxcli/dev-test/compare/28b9e3b1cde70174831a2d175f6d7c542e59fb72...v0.4.2) (2018-01-20)
+
+
+### Bug Fixes
+
+* updated deps ([306c3ee](https://github.com/dxcli/dev-test/commit/306c3ee))
+
 <a name="0.4.1"></a>
 ## [0.4.1](https://github.com/dxcli/dev-test/compare/39bc87761d4cce79d38ed69a66592ac499d6347e...v0.4.1) (2018-01-20)
 
