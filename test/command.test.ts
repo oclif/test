@@ -1,11 +1,28 @@
 import * as path from 'path'
 
-import {describe, expect, testCommand} from '../src'
+import test, {expect} from '../src'
+
+const root = path.join(__dirname, 'fixtures/multi')
 
 describe('command', () => {
-  testCommand(['foo:bar'], {stdout: 'hello world!\n', root: path.join(__dirname, 'fixtures/multi')})
-  testCommand(['foo:bar', '--name=foo'], {stdout: 'hello foo!\n', root: path.join(__dirname, 'fixtures/multi')})
-  testCommand(['foo:bar', '--name=foo'], {stdout: true, root: path.join(__dirname, 'fixtures/multi')}, ({stdout}) => {
-    expect(stdout).to.equal('hello foo!\n')
-  })
+  test
+    .stdout()
+    .command(['foo:bar'], {root})
+    .it('runs foo:bar', output => {
+      expect(output.stdout).to.equal('hello world!\n')
+    })
+
+  test
+    .stdout()
+    .command(['foo:bar', '--name=foo'], {root})
+    .it('runs foo:bar', output => {
+      expect(output.stdout).to.equal('hello foo!\n')
+    })
+
+  test
+    .stdout()
+    .command(['foo:bar', '--name=foo'], {root})
+    .it('runs foo:bar', output => {
+      expect(output.stdout).to.equal('hello foo!\n')
+    })
 })
