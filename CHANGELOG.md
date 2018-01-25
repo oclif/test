@@ -1,3 +1,11 @@
+<a name="0.9.1"></a>
+## [0.9.1](https://github.com/dxcli/dev-test/compare/89d55b19ebdd7c04daad9c5156b4b62fb36d22ce...v0.9.1) (2018-01-25)
+
+
+### Bug Fixes
+
+* fix defaulting root ([275ae1e](https://github.com/dxcli/dev-test/commit/275ae1e))
+
 <a name="0.9.0"></a>
 # [0.9.0](https://github.com/dxcli/dev-test/compare/b7a1d2557905ffd8b59ab1333d236b5e768301e3...v0.9.0) (2018-01-25)
 
