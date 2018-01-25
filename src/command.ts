@@ -4,10 +4,7 @@ import * as _ from 'lodash'
 
 import {Options} from '.'
 
-export default (async (next, __, args: string[] | string, opts: Options) => {
-  _.defaults(opts, {
-    root: module.parent!.parent!.filename
-  })
-  await run(_.castArray(args), {root: opts.root})
+export default (async (next, __, args: string[] | string, opts = {}) => {
+  await run(_.castArray(args), {root: opts.root || module.parent!.parent!.filename})
   await next({})
 }) as Plugin<{}, (string[] | string), Partial<Options>>
