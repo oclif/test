@@ -5,14 +5,14 @@ import * as OS from 'os'
 import {expect, test} from '../src'
 
 describe('stdout', () => {
-  test
+  test()
   .stdout()
   .it('logs', output => {
     console.log('foo')
     expect(output.stdout).to.equal('foo\n')
   })
 
-  test
+  test()
   .stdout()
   .it('logs twice', output => {
     console.log('foo')
@@ -23,7 +23,7 @@ describe('stdout', () => {
 })
 
 describe('stdout + stderr', () => {
-  test
+  test()
   .stdout()
   .stderr()
   .it('logs and errors', output => {
@@ -37,7 +37,7 @@ describe('stdout + stderr', () => {
 const os = ['darwin', 'win32', 'linux']
 os.forEach(os => {
   describe(os, () => {
-    test
+    test()
     .mock(OS, 'platform', () => os)
     .it('sets os', () => {
       expect(OS.platform()).to.equal(os)
@@ -46,20 +46,20 @@ os.forEach(os => {
 })
 
 describe('mock env', () => {
-  test
+  test()
   .env({foo: 'bar'})
   .it('gets env', () => {
     expect(process.env).to.deep.equal({foo: 'bar'})
   })
 
-  test
+  test()
   .env({foo: 'baz'})
   .it('gets env from it', () => {
     expect(process.env).to.deep.equal({foo: 'baz'})
   })
 
-  test
-  .env()
+  test()
+  .env({})
   .it('clears env', () => {
     expect(process.env).to.deep.equal({})
   })

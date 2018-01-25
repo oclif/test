@@ -6,7 +6,7 @@ describe('hooks', () => {
   const stdout = `test/0.0.0 (${process.platform}-${process.arch}) node-${process.version}\n`
   const root = path.join(__dirname, 'fixtures/multi')
 
-  test
+  test()
   .stdout()
   .exit(0)
   .hook('init', {id: '-v'}, {root})
@@ -14,7 +14,7 @@ describe('hooks', () => {
     expect(output.stdout).to.equal(stdout)
   })
 
-  test
+  test()
   .stdout()
   .exit(0)
   .hook('init', {id: '--version'}, {root})
@@ -22,7 +22,7 @@ describe('hooks', () => {
     expect(output.stdout).to.equal(stdout)
   })
 
-  test
+  test()
   .stdout()
   .hook('init', {}, {root})
   .it('does not fail')
