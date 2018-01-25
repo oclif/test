@@ -1,4 +1,4 @@
-import {Base, expect, fancy} from 'fancy-mocha'
+import {Base, CatchOptions, EnvOptions, expect, fancy, NockScope, StdmockOptions} from 'fancy-mocha'
 
 import command from './command'
 import exit from './exit'
@@ -14,7 +14,11 @@ export const test = fancy
 export default test
 
 export {
-  expect,
-  Options,
   Base,
+  CatchOptions,
+  EnvOptions,
+  NockScope,
+  Options,
+  StdmockOptions,
+  expect,
 }
