@@ -1,3 +1,13 @@
+<a name="0.9.2"></a>
+## [0.9.2](https://github.com/dxcli/dev-test/compare/275ae1e49fc427d9e9093f931ba9668ecddb5d0b...v0.9.2) (2018-01-25)
+
+
+### Bug Fixes
+
+* added some exports ([f0f450e](https://github.com/dxcli/dev-test/commit/f0f450e))
+* updated fancy-mocha ([8420ab2](https://github.com/dxcli/dev-test/commit/8420ab2))
+* updated fancy-mocha ([d78793e](https://github.com/dxcli/dev-test/commit/d78793e))
+
 <a name="0.9.1"></a>
 ## [0.9.1](https://github.com/dxcli/dev-test/compare/89d55b19ebdd7c04daad9c5156b4b62fb36d22ce...v0.9.1) (2018-01-25)
 
