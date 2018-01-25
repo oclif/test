@@ -1,7 +1,7 @@
 {
   "name": "@dxcli/dev-test",
   "description": "test helpers for dxcli components",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/dxcli/dev-test/issues",
   "dependencies": {

@@ -1,3 +1,11 @@
+<a name="0.9.0"></a>
+# [0.9.0](https://github.com/dxcli/dev-test/compare/b7a1d2557905ffd8b59ab1333d236b5e768301e3...v0.9.0) (2018-01-25)
+
+
+### Features
+
+* use fancy-mocha ([89d55b1](https://github.com/dxcli/dev-test/commit/89d55b1))
+
 <a name="0.8.0"></a>
 # [0.8.0](https://github.com/dxcli/dev-test/compare/036ec315486d5caf3af301df37f9c252ecb64fe4...v0.8.0) (2018-01-21)
 
