@@ -8,21 +8,18 @@ describe('command', () => {
   test()
   .stdout()
   .command(['foo:bar'], {root})
-  .it('runs foo:bar', output => {
-    expect(output.stdout).to.equal('hello world!\n')
-  })
+  .run(output => expect(output.stdout).to.equal('hello world!\n'))
+  .end('runs foo:bar')
 
   test()
   .stdout()
   .command(['foo:bar', '--name=foo'], {root})
-  .it('runs foo:bar', output => {
-    expect(output.stdout).to.equal('hello foo!\n')
-  })
+  .run(output => expect(output.stdout).to.equal('hello foo!\n'))
+  .end('runs foo:bar')
 
   test()
   .stdout()
   .command(['foo:bar', '--name=foo'], {root})
-  .it('runs foo:bar', output => {
-    expect(output.stdout).to.equal('hello foo!\n')
-  })
+  .run(output => expect(output.stdout).to.equal('hello foo!\n'))
+  .end('runs foo:bar')
 })

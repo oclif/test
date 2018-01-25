@@ -7,14 +7,14 @@ import {expect, test} from '../src'
 describe('stdout', () => {
   test()
   .stdout()
-  .it('logs', output => {
+  .end('logs', output => {
     console.log('foo')
     expect(output.stdout).to.equal('foo\n')
   })
 
   test()
   .stdout()
-  .it('logs twice', output => {
+  .end('logs twice', output => {
     console.log('foo')
     expect(output.stdout).to.equal('foo\n')
     console.log('bar')
@@ -26,7 +26,7 @@ describe('stdout + stderr', () => {
   test()
   .stdout()
   .stderr()
-  .it('logs and errors', output => {
+  .end('logs and errors', output => {
     console.log('foo')
     console.error('bar')
     expect(output.stdout).to.equal('foo\n')
@@ -39,7 +39,7 @@ os.forEach(os => {
   describe(os, () => {
     test()
     .mock(OS, 'platform', () => os)
-    .it('sets os', () => {
+    .end('sets os', () => {
       expect(OS.platform()).to.equal(os)
     })
   })

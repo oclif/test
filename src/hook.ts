@@ -1,5 +1,4 @@
 import {Engine} from '@dxcli/engine'
-import {Plugin} from 'fancy-mocha'
 
 import {Options} from './options'
 
@@ -15,9 +14,8 @@ import {Options} from './options'
  * @param hookOpts - options to pass to hook. Config object will be passed automatically.
  * @param opts - test options
  */
-export default (async (next, __, event, hookOpts, opts = {}) => {
+export default (event?: string, hookOpts: object = {}, opts: Options = {}) => async () => {
   const engine = new Engine()
   await engine.load(opts.root || module.parent!.parent!.filename)
   await engine.runHook(event!, hookOpts || {})
-  await next({})
-}) as Plugin<{}, string, object, Partial<Options>>
+}

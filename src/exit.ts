@@ -6,14 +6,16 @@ import {Plugin} from 'fancy-mocha'
  * @param code - expected code
  * @default 0
  */
-export default (async (next, __, code) => {
-  try {
-    await next({})
+export default (code = 0) => {
+  const plugin = (() => {
     throw new Error(`Expected hook to exit with code ${code} but it ran without exiting`)
-  } catch (err) {
+  }) as Plugin
+  plugin.catch = context => {
+    const err = context.error
     if (!err['cli-ux'] || typeof err['cli-ux'].exit !== 'number') throw err
     if (err['cli-ux'].exit !== code) {
       throw new Error(`Expected hook to exit with ${code} but exited with ${err['cli-ux'].exit}`)
     }
   }
-}) as Plugin<{}, number>
+  return plugin
+}

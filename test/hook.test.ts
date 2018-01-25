@@ -8,22 +8,20 @@ describe('hooks', () => {
 
   test()
   .stdout()
-  .exit(0)
   .hook('init', {id: '-v'}, {root})
-  .it('catches -v', output => {
-    expect(output.stdout).to.equal(stdout)
-  })
+  .exit(0)
+  .run(output => expect(output.stdout).to.equal(stdout))
+  .end('catches -v')
 
   test()
   .stdout()
-  .exit(0)
   .hook('init', {id: '--version'}, {root})
-  .it('catches --version', output => {
-    expect(output.stdout).to.equal(stdout)
-  })
+  .exit(0)
+  .run(output => expect(output.stdout).to.equal(stdout))
+  .end('catches --version')
 
   test()
   .stdout()
   .hook('init', {}, {root})
-  .it('does not fail')
+  .end('does not fail')
 })
