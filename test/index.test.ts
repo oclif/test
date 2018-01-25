@@ -45,26 +45,6 @@ os.forEach(os => {
   })
 })
 
-describe('mock env', () => {
-  test()
-  .env({foo: 'bar'})
-  .it('gets env', () => {
-    expect(process.env).to.deep.equal({foo: 'bar'})
-  })
-
-  test()
-  .env({foo: 'baz'})
-  .it('gets env from it', () => {
-    expect(process.env).to.deep.equal({foo: 'baz'})
-  })
-
-  test()
-  .env({})
-  .it('clears env', () => {
-    expect(process.env).to.deep.equal({})
-  })
-})
-
 describe('chai-as-promised', () => {
   it('eventually expects', async () => {
     await expect(Promise.resolve('foo')).to.eventually.equal('foo')
