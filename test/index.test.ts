@@ -5,14 +5,14 @@ import * as OS from 'os'
 import {expect, test} from '../src'
 
 describe('stdout', () => {
-  test()
+  test
   .stdout()
   .end('logs', output => {
     console.log('foo')
     expect(output.stdout).to.equal('foo\n')
   })
 
-  test()
+  test
   .stdout()
   .end('logs twice', output => {
     console.log('foo')
@@ -23,7 +23,7 @@ describe('stdout', () => {
 })
 
 describe('stdout + stderr', () => {
-  test()
+  test
   .stdout()
   .stderr()
   .end('logs and errors', output => {
@@ -37,8 +37,8 @@ describe('stdout + stderr', () => {
 const os = ['darwin', 'win32', 'linux']
 os.forEach(os => {
   describe(os, () => {
-    test()
-    .mock(OS, 'platform', () => os)
+    test
+    .stub(OS, 'platform', () => os)
     .end('sets os', () => {
       expect(OS.platform()).to.equal(os)
     })

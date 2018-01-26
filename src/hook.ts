@@ -14,8 +14,11 @@ import {Options} from './options'
  * @param hookOpts - options to pass to hook. Config object will be passed automatically.
  * @param opts - test options
  */
-export default (event?: string, hookOpts: object = {}, opts: Options = {}) => async () => {
-  const engine = new Engine()
-  await engine.load(opts.root || module.parent!.parent!.filename)
-  await engine.runHook(event!, hookOpts || {})
-}
+export default (event?: string, hookOpts: object = {}, opts: Options = {}) => ({
+  async run(ctx: {expectation: string}) {
+    ctx.expectation = ctx.expectation || `runs ${event} hook`
+    const engine = new Engine()
+    await engine.load(opts.root || module.parent!.parent!.filename)
+    await engine.runHook(event!, hookOpts || {})
+  }
+})

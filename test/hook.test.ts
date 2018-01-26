@@ -1,27 +1,27 @@
 import * as path from 'path'
 
-import {expect, test} from '../src'
+import fancy, {expect} from '../src'
 
 describe('hooks', () => {
   const stdout = `test/0.0.0 (${process.platform}-${process.arch}) node-${process.version}\n`
   const root = path.join(__dirname, 'fixtures/multi')
 
-  test()
+  fancy
   .stdout()
   .hook('init', {id: '-v'}, {root})
   .exit(0)
-  .run(output => expect(output.stdout).to.equal(stdout))
-  .end('catches -v')
+  .do(output => expect(output.stdout).to.equal(stdout))
+  .it('catches -v')
 
-  test()
+  fancy
   .stdout()
   .hook('init', {id: '--version'}, {root})
   .exit(0)
-  .run(output => expect(output.stdout).to.equal(stdout))
-  .end('catches --version')
+  .do(output => expect(output.stdout).to.equal(stdout))
+  .it('catches --version')
 
-  test()
+  fancy
   .stdout()
   .hook('init', {}, {root})
-  .end('does not fail')
+  .it()
 })

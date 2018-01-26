@@ -3,6 +3,10 @@ import * as _ from 'lodash'
 
 import {Options} from '.'
 
-export default (args: string[] | string | undefined, opts: Options = {}) => async () => {
-  await run(_.castArray(args), {root: opts.root || module.parent!.parent!.filename})
-}
+export default (args: string[] | string | undefined, opts: Options = {}) => ({
+  async run(ctx: {expectation: string}) {
+    args = _.castArray(args)
+    ctx.expectation = ctx.expectation || `runs ${args.join(' ')}`
+    await run(args, {root: opts.root || module.parent!.parent!.filename})
+  }
+})
