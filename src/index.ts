@@ -1,4 +1,4 @@
-import {Context, EnvOptions, expect, fancy, NockScope, Plugin} from 'fancy-test'
+import {Base, Context, EnvOptions, expect, Fancy, fancy, NockScope, Plugin} from 'fancy-test'
 
 import command from './command'
 import exit from './exit'
@@ -14,6 +14,8 @@ export const test = fancy
 export default test
 
 export {
+  Base,
+  Fancy,
   Context,
   EnvOptions,
   NockScope,

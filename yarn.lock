@@ -1743,9 +1743,9 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
 
-fancy-test@^0.3.5:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-0.3.5.tgz#6ad7a38b1da46a62018981e3c80267a01bd023db"
+fancy-test@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-0.3.6.tgz#bd967ffadb4fd890d033b0b6530c17466b24b3ec"
   dependencies:
     lodash "^4.17.4"
     stdout-stderr "^0.1.4"
