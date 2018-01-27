@@ -44,9 +44,3 @@ os.forEach(os => {
     })
   })
 })
-
-describe('chai-as-promised', () => {
-  it('eventually expects', async () => {
-    await expect(Promise.resolve('foo')).to.eventually.equal('foo')
-  })
-})
