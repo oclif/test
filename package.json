@@ -5,6 +5,12 @@
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/dxcli/dev-test/issues",
   "dependencies": {
+    "fancy-test": "^0.5.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha-junit-reporter": "^1.17.0",
     "@types/chai": "^4.1.2",
     "@types/chai-as-promised": "^7.1.0",
     "@types/lodash": "^4.14.97",
@@ -12,12 +18,6 @@
     "@types/nock": "^9.1.2",
     "@types/node": "^9.4.0",
     "@types/read-pkg": "^3.0.0",
-    "chai": "^4.1.2",
-    "fancy-test": "^0.5.1",
-    "lodash": "^4.17.4",
-    "mocha-junit-reporter": "^1.17.0"
-  },
-  "devDependencies": {
     "@dxcli/dev-nyc-config": "^0.0.3",
     "@dxcli/dev-semantic-release": "^0.1.0",
     "@dxcli/dev-tslint": "^0.0.17",
