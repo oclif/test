@@ -1,3 +1,11 @@
+<a name="0.9.11"></a>
+## [0.9.11](https://github.com/dxcli/dev-test/compare/d4a55140333f0cc4ba0601b975dcd2f8f746c739...v0.9.11) (2018-01-27)
+
+
+### Bug Fixes
+
+* move everything to devDependencies to use [@dxcli](https://github.com/dxcli)/dev instead ([d800eb1](https://github.com/dxcli/dev-test/commit/d800eb1))
+
 <a name="0.9.10"></a>
 ## [0.9.10](https://github.com/dxcli/dev-test/compare/2473c2f8dbc9fb30aa49d7319cd8c0367a030e5b...v0.9.10) (2018-01-27)
 
