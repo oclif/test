@@ -1,3 +1,11 @@
+<a name="0.9.12"></a>
+## [0.9.12](https://github.com/dxcli/dev-test/compare/d800eb1e0453b4dc928e103ad8384b7a4285d596...v0.9.12) (2018-01-27)
+
+
+### Bug Fixes
+
+* updated deps ([11e18c0](https://github.com/dxcli/dev-test/commit/11e18c0))
+
 <a name="0.9.11"></a>
 ## [0.9.11](https://github.com/dxcli/dev-test/compare/d4a55140333f0cc4ba0601b975dcd2f8f746c739...v0.9.11) (2018-01-27)
 
