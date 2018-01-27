@@ -23,6 +23,7 @@
     "@dxcli/dev-tslint": "^0.0.17",
     "@dxcli/engine": "^0.1.11",
     "@dxcli/version": "^0.1.5",
+    "@types/node-notifier": "^0.0.28",
     "cli-ux": "^3.2.0",
     "eslint": "^4.16.0",
     "eslint-config-dxcli": "^1.1.4",
