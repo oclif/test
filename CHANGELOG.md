@@ -1,3 +1,11 @@
+<a name="0.9.18"></a>
+## [0.9.18](https://github.com/dxcli/test/compare/6c0a79775313da04ac3df1520af1144426deebd3...v0.9.18) (2018-01-28)
+
+
+### Bug Fixes
+
+* remove peer dep ([46ce619](https://github.com/dxcli/test/commit/46ce619))
+
 <a name="0.9.17"></a>
 ## [0.9.17](https://github.com/dxcli/test/compare/11b76681d9fbb4b5519f08b097a8abf38b277bd1...v0.9.17) (2018-01-28)
 
