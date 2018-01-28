@@ -1,3 +1,11 @@
+<a name="0.9.13"></a>
+## [0.9.13](https://github.com/dxcli/test/compare/9e620edba0962ffb08182f166cff6c6db0c759ce...v0.9.13) (2018-01-28)
+
+
+### Bug Fixes
+
+* ran generator ([1c9f8a3](https://github.com/dxcli/test/commit/1c9f8a3))
+
 <a name="0.9.12"></a>
 ## [0.9.12](https://github.com/dxcli/dev-test/compare/d800eb1e0453b4dc928e103ad8384b7a4285d596...v0.9.12) (2018-01-27)
 
