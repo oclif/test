@@ -102,7 +102,7 @@
   dependencies:
     find-up "^2.1.0"
 
-"@dxcli/command@^0.1.22":
+"@dxcli/command@^0.1.22", "@dxcli/command@^0.1.23":
   version "0.1.23"
   resolved "https://registry.yarnpkg.com/@dxcli/command/-/command-0.1.23.tgz#93a77b455ca1eddafc58e7966a3127dec5be420b"
   dependencies:

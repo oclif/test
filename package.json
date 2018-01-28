@@ -9,6 +9,7 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
+    "@dxcli/command": "^0.1.23",
     "@dxcli/config": "^0.1.28",
     "@dxcli/dev": "^2.0.13",
     "@dxcli/engine": "^0.1.13",
