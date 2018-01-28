@@ -5,7 +5,7 @@
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/dxcli/dev-test/issues",
   "dependencies": {
-    "fancy-test": "^0.5.5",
+    "fancy-test": "^0.6.0",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
