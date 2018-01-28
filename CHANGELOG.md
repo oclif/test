@@ -1,3 +1,11 @@
+<a name="0.9.16"></a>
+## [0.9.16](https://github.com/dxcli/test/compare/43dfa2997d4d3889d6a5af0300a1310f5f727eb2...v0.9.16) (2018-01-28)
+
+
+### Bug Fixes
+
+* fixed config loading ([11b7668](https://github.com/dxcli/test/commit/11b7668))
+
 <a name="0.9.15"></a>
 ## [0.9.15](https://github.com/dxcli/test/compare/1c361aa61eabdd02a887339d656eb06f86244a4c...v0.9.15) (2018-01-28)
 
