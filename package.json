@@ -40,9 +40,6 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "peerDependencies": {
-    "@dxcli/loader": "^0.2.8"
-  },
   "repository": "dxcli/test",
   "scripts": {
     "commitmsg": "dxcli-commitlint",
