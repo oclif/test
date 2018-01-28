@@ -11,7 +11,7 @@
   "devDependencies": {
     "@dxcli/dev-nyc-config": "^0.0.3",
     "@dxcli/dev-semantic-release": "^0.2.0",
-    "@dxcli/dev-tslint": "^0.0.17",
+    "@dxcli/dev-tslint": "^0.0.18",
     "@dxcli/engine": "^0.1.12",
     "@dxcli/version": "^0.1.6",
     "@types/chai": "^4.1.2",
