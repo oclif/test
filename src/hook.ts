@@ -1,6 +1,5 @@
+import {IConfig} from '@dxcli/config'
 import {Engine} from '@dxcli/engine'
-
-import {Options} from './options'
 
 /**
  * tests a dxcli hook
@@ -12,13 +11,12 @@ import {Options} from './options'
  *
  * @param event - hook to run
  * @param hookOpts - options to pass to hook. Config object will be passed automatically.
- * @param opts - test options
  */
-export default (event?: string, hookOpts: object = {}, opts: Options = {}) => ({
-  async run(ctx: {expectation: string}) {
+export default (event?: string, hookOpts: object = {}) => ({
+  async run(ctx: {config: IConfig, expectation: string}) {
     ctx.expectation = ctx.expectation || `runs ${event} hook`
     const engine = new Engine()
-    await engine.load(opts.root || module.parent!.parent!.filename)
+    await engine.load(ctx.config.root)
     await engine.runHook(event!, hookOpts || {})
   }
 })

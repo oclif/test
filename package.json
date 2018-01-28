@@ -12,6 +12,7 @@
     "@dxcli/config": "^0.1.27",
     "@dxcli/dev": "^2.0.12",
     "@dxcli/engine": "^0.1.12",
+    "@dxcli/loader": "^0.2.8",
     "@dxcli/semantic-release": "^0.2.4",
     "@dxcli/tslint": "^0.0.23",
     "@dxcli/version": "^0.1.6",
@@ -38,6 +39,9 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
+  "peerDependencies": {
+    "@dxcli/loader": "^0.2.8"
+  },
   "repository": "dxcli/test",
   "scripts": {
     "commitmsg": "dxcli-commitlint",
