@@ -1,6 +1,8 @@
 import {IConfig} from '@dxcli/config'
 import {Engine} from '@dxcli/engine'
 
+import loadConfig from './load_config'
+
 /**
  * tests a dxcli hook
  *
@@ -14,6 +16,7 @@ import {Engine} from '@dxcli/engine'
  */
 export default (event?: string, hookOpts: object = {}) => ({
   async run(ctx: {config: IConfig, expectation: string}) {
+    if (!ctx.config) ctx.config = await loadConfig().run({} as any)
     ctx.expectation = ctx.expectation || `runs ${event} hook`
     const engine = new Engine()
     await engine.load(ctx.config.root)
