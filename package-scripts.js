@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/filename-case */
+
 const {
   setColors,
   concurrent,
@@ -35,7 +37,7 @@ if (process.env.CI) {
 
 test = concurrent({
   ...linters,
-  test: series('nps build -l warn', test),
+  test: series('nps build', test),
 })
 
 if (process.env.CI) test = series(mkdirp('reports'), test)
