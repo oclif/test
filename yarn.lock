@@ -148,9 +148,9 @@
     semantic-release "^12.2.5"
     shelljs "^0.8.1"
 
-"@dxcli/dev-tslint@^0.0.17":
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/@dxcli/dev-tslint/-/dev-tslint-0.0.17.tgz#f20767b72188a0695e4b34ba50976e11502d3891"
+"@dxcli/dev-tslint@^0.0.18":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@dxcli/dev-tslint/-/dev-tslint-0.0.18.tgz#5d431d5abf53f6935c7b22189cd39f66ee963546"
   dependencies:
     tslint "^5.9.1"
     tslint-xo "^0.5.0"
