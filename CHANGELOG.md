@@ -1,3 +1,12 @@
+<a name="0.9.17"></a>
+## [0.9.17](https://github.com/dxcli/test/compare/11b76681d9fbb4b5519f08b097a8abf38b277bd1...v0.9.17) (2018-01-28)
+
+
+### Bug Fixes
+
+* add [@dxcli](https://github.com/dxcli)/command ([6c0a797](https://github.com/dxcli/test/commit/6c0a797))
+* fixing example publishing ([adee5fe](https://github.com/dxcli/test/commit/adee5fe))
+
 <a name="0.9.16"></a>
 ## [0.9.16](https://github.com/dxcli/test/compare/43dfa2997d4d3889d6a5af0300a1310f5f727eb2...v0.9.16) (2018-01-28)
 
