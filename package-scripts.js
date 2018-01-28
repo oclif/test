@@ -35,7 +35,7 @@ if (process.env.CI) {
 
 test = concurrent({
   ...linters,
-  test: series('nps build', test),
+  test: series('nps build -l warn', test),
 })
 
 if (process.env.CI) test = series(mkdirp('reports'), test)
