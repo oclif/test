@@ -1,3 +1,11 @@
+<a name="0.9.19"></a>
+## [0.9.19](https://github.com/dxcli/test/compare/46ce619516b71b5b285090f31a151119d9d93fce...v0.9.19) (2018-01-29)
+
+
+### Bug Fixes
+
+* updated engine ([6d396b1](https://github.com/dxcli/test/commit/6d396b1))
+
 <a name="0.9.18"></a>
 ## [0.9.18](https://github.com/dxcli/test/compare/6c0a79775313da04ac3df1520af1144426deebd3...v0.9.18) (2018-01-28)
 
