@@ -1,5 +1,4 @@
-import {IConfig} from '@dxcli/config'
-import {load} from '@dxcli/loader'
+import {IConfig, read} from '@dxcli/config'
 
 export type WithRoot<T> = T & {root: string}
 
@@ -9,8 +8,7 @@ export type WithRoot<T> = T & {root: string}
 export const _loadConfig = (opts: {root?: string} = {}) => {
   return {
     async run(ctx: {config: IConfig}) {
-      const {config} = await load({root: opts.root || loadConfig.root})
-      return ctx.config = config
+      return ctx.config = await read({root: opts.root || loadConfig.root})
     }
   }
 }

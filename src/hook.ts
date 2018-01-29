@@ -19,7 +19,7 @@ export default (event?: string, hookOpts: object = {}) => ({
     if (!ctx.config) ctx.config = await loadConfig().run({} as any)
     ctx.expectation = ctx.expectation || `runs ${event} hook`
     const engine = new Engine()
-    await engine.load(ctx.config.root)
+    await engine.load(ctx.config)
     await engine.runHook(event!, hookOpts || {})
   }
 })
