@@ -62,9 +62,9 @@
     tslint "^5.9.1"
     tslint-xo "^0.5.0"
 
-"@anycli/version@^0.1.12":
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/@anycli/version/-/version-0.1.13.tgz#b69f779bd6b2f7d2a310ddb23f0f1cd99c2aa0ee"
+"@anycli/version@^0.1.14":
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/@anycli/version/-/version-0.1.14.tgz#c5f376e9093a07339cb8970b7bed390990dc0101"
   dependencies:
     "@anycli/command" "^0.2.8"
     cli-ux "^3.3.9"
