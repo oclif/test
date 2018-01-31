@@ -1,3 +1,12 @@
+<a name="0.9.20"></a>
+## [0.9.20](https://github.com/anycli/test/compare/v0.9.19...v0.9.20) (2018-01-31)
+
+
+### Bug Fixes
+
+* anycli rename ([815def7](https://github.com/anycli/test/commit/815def7))
+* anycli rename ([ca39cc9](https://github.com/anycli/test/commit/ca39cc9))
+
 <a name="0.9.19"></a>
 ## [0.9.19](https://github.com/dxcli/test/compare/46ce619516b71b5b285090f31a151119d9d93fce...v0.9.19) (2018-01-29)
 
