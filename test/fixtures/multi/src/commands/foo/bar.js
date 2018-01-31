@@ -1,4 +1,4 @@
-const {Command, flags} = require('@dxcli/command')
+const {Command, flags} = require('@anycli/command')
 const {cli} = require('cli-ux')
 
 class CLI extends Command {

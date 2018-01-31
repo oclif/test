@@ -1,4 +1,4 @@
-const {Engine} = require('@dxcli/engine')
+const {Engine} = require('@anycli/engine')
 
 class CLI extends Engine {}
 

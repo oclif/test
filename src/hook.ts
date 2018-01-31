@@ -1,10 +1,10 @@
-import {IConfig} from '@dxcli/config'
-import {Engine} from '@dxcli/engine'
+import {IConfig} from '@anycli/config'
+import {Engine} from '@anycli/engine'
 
 import loadConfig from './load_config'
 
 /**
- * tests a dxcli hook
+ * tests a anycli hook
  *
  * @example <caption>check that when the 'init' hook is ran it outputs "this output"</caption>
  * testHook('init', {id: 'mycommand'}, {stdout: true}, output => {

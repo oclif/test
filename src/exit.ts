@@ -1,5 +1,5 @@
 /**
- * ensures that a dxcli command or hook exits
+ * ensures that a anycli command or hook exits
  *
  * @param code - expected code
  * @default 0

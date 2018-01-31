@@ -1,5 +1,5 @@
-import {IConfig} from '@dxcli/config'
-import run from '@dxcli/engine'
+import {IConfig} from '@anycli/config'
+import run from '@anycli/engine'
 import * as _ from 'lodash'
 
 import loadConfig from './load_config'

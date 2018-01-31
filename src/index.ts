@@ -1,5 +1,5 @@
 // tslint:disable no-var-before-return
-import {IConfig} from '@dxcli/config'
+import {IConfig} from '@anycli/config'
 import {expect, fancy, FancyTypes, NockScope} from 'fancy-test'
 
 import command from './command'

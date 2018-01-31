@@ -1,4 +1,4 @@
-import {IConfig, read} from '@dxcli/config'
+import {IConfig, read} from '@anycli/config'
 
 export type WithRoot<T> = T & {root: string}
 

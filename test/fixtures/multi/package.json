@@ -2,10 +2,10 @@
   "name": "test",
   "version": "0.0.0",
   "private": true,
-  "dxcli": {
+  "anycli": {
     "commands": "./src/commands",
     "plugins": [
-      "@dxcli/version"
+      "@anycli/version"
     ]
   },
   "engines": {
