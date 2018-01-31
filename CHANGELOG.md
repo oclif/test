@@ -1,3 +1,11 @@
+<a name="0.10.0"></a>
+# [0.10.0](https://github.com/anycli/test/compare/815def79357243b1f4d572609d2a0fe3a795be8c...v0.10.0) (2018-01-31)
+
+
+### Features
+
+* added loadEngine ([ac8b8ad](https://github.com/anycli/test/commit/ac8b8ad))
+
 <a name="0.9.20"></a>
 ## [0.9.20](https://github.com/anycli/test/compare/v0.9.19...v0.9.20) (2018-01-31)
 
