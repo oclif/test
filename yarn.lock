@@ -11,6 +11,17 @@
     lodash "^4.17.4"
     tslib "^1.9.0"
 
+"@anycli/command@^0.2.19":
+  version "0.2.20"
+  resolved "https://registry.yarnpkg.com/@anycli/command/-/command-0.2.20.tgz#18f9c6f25a7871827af454ef05f62fd5d0b61c15"
+  dependencies:
+    "@anycli/config" "^0.2.3"
+    "@anycli/parser" "^3.0.1"
+    cli-ux "^3.3.10"
+    debug "^3.1.0"
+    lodash "^4.17.4"
+    tslib "^1.9.0"
+
 "@anycli/config@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@anycli/config/-/config-0.2.3.tgz#2fc399d2d609c0efdf3108d240f0b557abad51dc"
@@ -53,6 +64,14 @@
     chalk "^2.3.0"
     lodash "^4.17.4"
 
+"@anycli/parser@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@anycli/parser/-/parser-3.0.1.tgz#24a2bca4abe1e1ffb91b0210b709b3ec15ee4ea4"
+  dependencies:
+    "@anycli/screen" "^0.0.3"
+    chalk "^2.3.0"
+    lodash "^4.17.4"
+
 "@anycli/screen@^0.0.3":
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@anycli/screen/-/screen-0.0.3.tgz#f0afd970c3ed725702948a45a874ede1fdd9362e"
@@ -64,11 +83,11 @@
     tslint "^5.9.1"
     tslint-xo "^0.6.0"
 
-"@anycli/version@^0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@anycli/version/-/version-0.1.18.tgz#a377ec46e1b625fd8d2b2aa27d3a7577ce595107"
+"@anycli/version@^0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@anycli/version/-/version-0.1.19.tgz#4464c3c831e0dc1d0ef92375167ec9af923b66c3"
   dependencies:
-    "@anycli/command" "^0.2.18"
+    "@anycli/command" "^0.2.19"
     "@anycli/config" "^0.2.3"
     cli-ux "^3.3.10"
 

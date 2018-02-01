@@ -12,7 +12,7 @@
     "@anycli/config": "^0.2.3",
     "@anycli/engine": "^0.1.35",
     "@anycli/tslint": "^0.2.0",
-    "@anycli/version": "^0.1.18",
+    "@anycli/version": "^0.1.19",
     "@commitlint/cli": "^6.0.5",
     "@commitlint/config-conventional": "^6.0.4",
     "@types/chai": "^4.1.2",
