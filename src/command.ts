@@ -9,6 +9,6 @@ export default (args: string[] | string | undefined) => ({
     if (!ctx.config) ctx.config = await loadConfig().run({} as any)
     args = _.castArray(args)
     ctx.expectation = ctx.expectation || `runs ${args.join(' ')}`
-    await run(args, ctx.config)
+    await run(args, ctx)
   }
 })
