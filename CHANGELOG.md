@@ -1,3 +1,11 @@
+<a name="0.10.1"></a>
+## [0.10.1](https://github.com/anycli/test/compare/ac8b8ad827acddd1f06b2f47941543d1497e9f59...v0.10.1) (2018-02-01)
+
+
+### Bug Fixes
+
+* updated engine ([f69f124](https://github.com/anycli/test/commit/f69f124))
+
 <a name="0.10.0"></a>
 # [0.10.0](https://github.com/anycli/test/compare/815def79357243b1f4d572609d2a0fe3a795be8c...v0.10.0) (2018-01-31)
 
