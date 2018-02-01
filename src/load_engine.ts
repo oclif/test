@@ -12,7 +12,8 @@ export const _loadEngine = (opts: {root?: string} = {}) => {
   return {
     async run(ctx: {config: IConfig, engine: IEngine}) {
       if (!ctx.config) ctx.config = await loadConfig().run(opts as any)
-      ctx.engine = new Engine()
+      const EEngine: typeof Engine = require('@anycli/engine').Engine
+      ctx.engine = new EEngine()
       await ctx.engine.load(ctx.config)
     }
   }
