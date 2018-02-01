@@ -1,3 +1,11 @@
+<a name="0.10.2"></a>
+## [0.10.2](https://github.com/anycli/test/compare/f69f12493fdd456dd822d70f9698f82cbbc7c90c...v0.10.2) (2018-02-01)
+
+
+### Bug Fixes
+
+* lazy load engine ([5fd5b91](https://github.com/anycli/test/commit/5fd5b91))
+
 <a name="0.10.1"></a>
 ## [0.10.1](https://github.com/anycli/test/compare/ac8b8ad827acddd1f06b2f47941543d1497e9f59...v0.10.1) (2018-02-01)
 
