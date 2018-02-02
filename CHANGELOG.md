@@ -1,3 +1,11 @@
+<a name="0.10.4"></a>
+## [0.10.4](https://github.com/anycli/test/compare/07edc1c42f32ba3ecc534f4bea0f2db61b0d9955...v0.10.4) (2018-02-02)
+
+
+### Bug Fixes
+
+* updated deps ([2322269](https://github.com/anycli/test/commit/2322269))
+
 <a name="0.10.3"></a>
 ## [0.10.3](https://github.com/anycli/test/compare/5fd5b9162030fe7c140e9084e016f15b2fcf20f5...v0.10.3) (2018-02-02)
 
