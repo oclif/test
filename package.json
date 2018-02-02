@@ -9,7 +9,7 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "@anycli/config": "^0.2.11",
+    "@anycli/config": "^0.3.0",
     "@anycli/engine": "^0.1.46",
     "@anycli/tslint": "^0.2.2",
     "@anycli/version": "^0.1.19",
