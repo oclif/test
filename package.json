@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@anycli/config": "^0.2.11",
-    "@anycli/engine": "^0.1.46",
+    "@anycli/engine": "^0.2.0",
     "@anycli/tslint": "^0.2.2",
     "@anycli/version": "^0.1.19",
     "@commitlint/cli": "^6.0.5",
