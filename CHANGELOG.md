@@ -1,3 +1,11 @@
+<a name="0.10.5"></a>
+## [0.10.5](https://github.com/anycli/test/compare/232226999009377aca4e11d4be0b42292178d8ae...v0.10.5) (2018-02-03)
+
+
+### Bug Fixes
+
+* updated to work with new config/command ([fa184da](https://github.com/anycli/test/commit/fa184da))
+
 <a name="0.10.4"></a>
 ## [0.10.4](https://github.com/anycli/test/compare/07edc1c42f32ba3ecc534f4bea0f2db61b0d9955...v0.10.4) (2018-02-02)
 
