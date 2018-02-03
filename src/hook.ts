@@ -1,5 +1,7 @@
 import * as Config from '@anycli/config'
 
+import {loadConfig} from './load_config'
+
 /**
  * tests a anycli hook
  *
@@ -14,7 +16,7 @@ import * as Config from '@anycli/config'
 export default (event?: string, hookOpts: object = {}) => ({
   async run(ctx: {config: Config.IConfig, expectation: string}) {
     if (!event) throw new Error('no hook provided')
-    if (!ctx.config) ctx.config = Config.load()
+    if (!ctx.config) ctx.config = loadConfig().run({} as any)
     ctx.expectation = ctx.expectation || `runs ${event} hook`
     await ctx.config.runHook(event, hookOpts || {})
   }
