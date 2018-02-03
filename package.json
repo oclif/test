@@ -1,7 +1,7 @@
 {
   "name": "@anycli/test",
   "description": "test helpers for anycli components",
-  "version": "0.10.8",
+  "version": "0.10.9",
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/anycli/test/issues",
   "dependencies": {

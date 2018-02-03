@@ -1,3 +1,11 @@
+<a name="0.10.9"></a>
+## [0.10.9](https://github.com/anycli/test/compare/c1b6e1aa3f5fe2f3ea400a5dda0fe4734e39595c...v0.10.9) (2018-02-03)
+
+
+### Bug Fixes
+
+* put reset flag on loadConfig ([6979084](https://github.com/anycli/test/commit/6979084))
+
 <a name="0.10.8"></a>
 ## [0.10.8](https://github.com/anycli/test/compare/83bdc23f9565d74eac32bc28b3a756443b2464dc...v0.10.8) (2018-02-03)
 
