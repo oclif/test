@@ -1,3 +1,11 @@
+<a name="0.10.6"></a>
+## [0.10.6](https://github.com/anycli/test/compare/fa184dab258fdb91ff1799c91853c1a8fc140355...v0.10.6) (2018-02-03)
+
+
+### Bug Fixes
+
+* fixed loadConfig with hooks ([54303a0](https://github.com/anycli/test/commit/54303a0))
+
 <a name="0.10.5"></a>
 ## [0.10.5](https://github.com/anycli/test/compare/232226999009377aca4e11d4be0b42292178d8ae...v0.10.5) (2018-02-03)
 
