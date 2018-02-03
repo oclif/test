@@ -13,11 +13,11 @@
     lodash "^4.17.4"
     tslib "^1.9.0"
 
-"@anycli/command@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@anycli/command/-/command-1.2.1.tgz#026ee48b85c53850bfef28f1a08917f489f110d5"
+"@anycli/command@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@anycli/command/-/command-1.2.3.tgz#b239669674f98098b1af096f081958b270fab0b6"
   dependencies:
-    "@anycli/parser" "^3.2.1"
+    "@anycli/parser" "^3.2.2"
     cli-ux "^3.3.13"
     debug "^3.1.0"
     fs-extra "^5.0.0"
@@ -35,9 +35,9 @@
     lodash "^4.17.4"
     read-pkg "^3.0.0"
 
-"@anycli/config@^1.0.15":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@anycli/config/-/config-1.0.15.tgz#72f175df4be6c1fd4c8630c28d2c7243dac3c81c"
+"@anycli/config@^1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@anycli/config/-/config-1.0.18.tgz#f6f80403783a78eeebccc5f218cd07485308997c"
   dependencies:
     cli-ux "^3.3.13"
     debug "^3.1.0"
@@ -56,9 +56,9 @@
     chalk "^2.3.0"
     lodash "^4.17.4"
 
-"@anycli/parser@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@anycli/parser/-/parser-3.2.1.tgz#89fe1c37f8792d6c1cba7d1c4ec2fb42b290ce05"
+"@anycli/parser@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@anycli/parser/-/parser-3.2.2.tgz#ee2616e889e7dd78bc269638b7eee3f3096e2c91"
   dependencies:
     "@anycli/screen" "^0.0.3"
     chalk "^2.3.0"
