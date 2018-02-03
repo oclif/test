@@ -1,3 +1,11 @@
+<a name="0.10.8"></a>
+## [0.10.8](https://github.com/anycli/test/compare/83bdc23f9565d74eac32bc28b3a756443b2464dc...v0.10.8) (2018-02-03)
+
+
+### Bug Fixes
+
+* export command ([c1b6e1a](https://github.com/anycli/test/commit/c1b6e1a))
+
 <a name="0.10.7"></a>
 ## [0.10.7](https://github.com/anycli/test/compare/54303a06893c4232824e7e91f66464bd4c999ee8...v0.10.7) (2018-02-03)
 
