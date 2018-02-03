@@ -1,3 +1,12 @@
+<a name="0.10.7"></a>
+## [0.10.7](https://github.com/anycli/test/compare/54303a06893c4232824e7e91f66464bd4c999ee8...v0.10.7) (2018-02-03)
+
+
+### Bug Fixes
+
+* bump config ([83bdc23](https://github.com/anycli/test/commit/83bdc23))
+* clear plugincache ([61ec050](https://github.com/anycli/test/commit/61ec050))
+
 <a name="0.10.6"></a>
 ## [0.10.6](https://github.com/anycli/test/compare/fa184dab258fdb91ff1799c91853c1a8fc140355...v0.10.6) (2018-02-03)
 
