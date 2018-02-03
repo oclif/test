@@ -21,4 +21,5 @@ export {
   FancyTypes,
   Config,
   NockScope,
+  command,
 }
