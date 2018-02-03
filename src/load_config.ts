@@ -1,16 +1,16 @@
-import {IConfig, read} from '@anycli/config'
-
-export type WithRoot<T> = T & {root: string}
+import * as Config from '@anycli/config'
 
 /**
  * loads CLI plugin/multi config
  */
-export const _loadConfig = (opts: {root?: string} = {}) => {
+export function loadConfig(root?: string) {
   return {
-    async run(ctx: {config: IConfig}) {
-      return ctx.config = await read({root: opts.root || loadConfig.root})
+    run(ctx: {config: Config.IConfig}) {
+      return ctx.config = Config.load(root || loadConfig.root)
     }
   }
 }
-const loadConfig = _loadConfig as WithRoot<typeof _loadConfig>
-export default loadConfig
+
+export namespace loadConfig {
+  export let root: string
+}

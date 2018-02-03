@@ -1,7 +1,4 @@
-import {IConfig} from '@anycli/config'
-import {Engine} from '@anycli/engine'
-
-import loadConfig from './load_config'
+import * as Config from '@anycli/config'
 
 /**
  * tests a anycli hook
@@ -15,12 +12,10 @@ import loadConfig from './load_config'
  * @param hookOpts - options to pass to hook. Config object will be passed automatically.
  */
 export default (event?: string, hookOpts: object = {}) => ({
-  async run(ctx: {config: IConfig, expectation: string}) {
-    if (!ctx.config) ctx.config = await loadConfig().run({} as any)
+  async run(ctx: {config: Config.IConfig, expectation: string}) {
+    if (!event) throw new Error('no hook provided')
+    if (!ctx.config) ctx.config = Config.load()
     ctx.expectation = ctx.expectation || `runs ${event} hook`
-    const EEngine: typeof Engine = require('@anycli/engine').Engine
-    const engine = new EEngine()
-    await engine.load(ctx.config)
-    await engine.runHook(event!, hookOpts || {})
+    await ctx.config.runHook(event, hookOpts || {})
   }
 })
