@@ -1,7 +1,7 @@
 import * as Config from '@anycli/config'
 import {expect, fancy, FancyTypes, NockScope} from 'fancy-test'
 
-import command from './command'
+import {command} from './command'
 import exit from './exit'
 import hook from './hook'
 import {loadConfig} from './load_config'
@@ -19,6 +19,6 @@ export default test
 export {
   expect,
   FancyTypes,
-  NockScope,
   Config,
+  NockScope,
 }

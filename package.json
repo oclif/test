@@ -5,12 +5,12 @@
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/anycli/test/issues",
   "dependencies": {
-    "fancy-test": "^0.6.8",
+    "fancy-test": "^0.6.10",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "@anycli/command": "^1.2.0",
-    "@anycli/config": "^1.0.9",
+    "@anycli/command": "^1.2.1",
+    "@anycli/config": "^1.0.14",
     "@anycli/tslint": "^0.2.5",
     "@anycli/version": "^0.1.19",
     "@types/chai": "^4.1.2",

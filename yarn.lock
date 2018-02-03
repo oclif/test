@@ -13,9 +13,9 @@
     lodash "^4.17.4"
     tslib "^1.9.0"
 
-"@anycli/command@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@anycli/command/-/command-1.2.0.tgz#10692132c097e620f6ff5e9560fb1b6921ae146a"
+"@anycli/command@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@anycli/command/-/command-1.2.1.tgz#026ee48b85c53850bfef28f1a08917f489f110d5"
   dependencies:
     "@anycli/parser" "^3.2.1"
     cli-ux "^3.3.13"
@@ -35,9 +35,9 @@
     lodash "^4.17.4"
     read-pkg "^3.0.0"
 
-"@anycli/config@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@anycli/config/-/config-1.0.9.tgz#09e8e22a1586bb05d2bf4815fafe3d0674356a62"
+"@anycli/config@^1.0.14":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@anycli/config/-/config-1.0.14.tgz#2ffbafde6f67ee632e6614c67800d050a9575d9d"
   dependencies:
     cli-ux "^3.3.13"
     debug "^3.1.0"
@@ -668,9 +668,9 @@ extract-stack@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/extract-stack/-/extract-stack-1.0.0.tgz#b97acaf9441eea2332529624b732fc5a1c8165fa"
 
-fancy-test@^0.6.8:
-  version "0.6.8"
-  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-0.6.8.tgz#8f5f335783e8f54bd6261ba1d09b83826333ad11"
+fancy-test@^0.6.10:
+  version "0.6.10"
+  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-0.6.10.tgz#39001bcb117b7067c851dc58da6236a08a49e267"
   dependencies:
     lodash "^4.17.4"
     stdout-stderr "^0.1.6"
