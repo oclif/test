@@ -35,9 +35,9 @@
     lodash "^4.17.4"
     read-pkg "^3.0.0"
 
-"@anycli/config@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@anycli/config/-/config-1.0.8.tgz#2dc50495c38c9f8d4e2ceb464ccb7b11cfc481b2"
+"@anycli/config@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@anycli/config/-/config-1.0.9.tgz#09e8e22a1586bb05d2bf4815fafe3d0674356a62"
   dependencies:
     cli-ux "^3.3.13"
     debug "^3.1.0"

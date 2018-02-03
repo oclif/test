@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@anycli/command": "^1.2.0",
-    "@anycli/config": "^1.0.8",
+    "@anycli/config": "^1.0.9",
     "@anycli/tslint": "^0.2.5",
     "@anycli/version": "^0.1.19",
     "@types/chai": "^4.1.2",
