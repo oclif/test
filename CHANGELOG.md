@@ -1,3 +1,11 @@
+<a name="0.10.10"></a>
+## [0.10.10](https://github.com/anycli/test/compare/6979084b79f1c39ee6b8c2da201f70d6f0077faf...v0.10.10) (2018-02-05)
+
+
+### Bug Fixes
+
+* remove lodash ([61c267f](https://github.com/anycli/test/commit/61c267f))
+
 <a name="0.10.9"></a>
 ## [0.10.9](https://github.com/anycli/test/compare/c1b6e1aa3f5fe2f3ea400a5dda0fe4734e39595c...v0.10.9) (2018-02-03)
 
