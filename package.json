@@ -5,26 +5,20 @@
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/anycli/test/issues",
   "dependencies": {
-    "fancy-test": "^0.6.10",
-    "lodash": "^4.17.4"
+    "fancy-test": "^1.0.1"
   },
   "devDependencies": {
-    "@anycli/command": "^1.2.3",
-    "@anycli/config": "^1.0.18",
+    "@anycli/command": "^1.2.4",
+    "@anycli/config": "^1.1.6",
     "@anycli/tslint": "^0.2.5",
     "@anycli/version": "^0.1.19",
     "@types/chai": "^4.1.2",
-    "@types/lodash": "^4.14.100",
     "@types/mocha": "^2.2.48",
-    "@types/nock": "^9.1.2",
     "@types/node": "^9.4.0",
-    "@types/node-notifier": "^0.0.28",
-    "@types/read-pkg": "^3.0.0",
     "chai": "^4.1.2",
-    "cli-ux": "^3.3.13",
+    "cli-ux": "^3.3.15",
     "concurrently": "^3.5.1",
-    "eslint": "^4.17.0",
-    "eslint-config-anycli": "^1.3.2",
+    "globby": "^7.1.1",
     "husky": "^0.14.3",
     "mocha": "^5.0.0",
     "ts-node": "^4.1.0",
@@ -45,7 +39,7 @@
   "repository": "anycli/test",
   "scripts": {
     "build": "rm -rf lib && tsc",
-    "lint": "concurrently -p command \"eslint .\" \"tsc -p test --noEmit\" \"tslint -p test\"",
+    "lint": "concurrently -p command \"tsc -p test --noEmit\" \"tslint -p test\"",
     "posttest": "yarn run lint",
     "prepublishOnly": "yarn run build",
     "test": "mocha --forbid-only \"test/**/*.test.ts\""
