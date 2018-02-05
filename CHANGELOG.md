@@ -1,3 +1,11 @@
+<a name="0.10.11"></a>
+## [0.10.11](https://github.com/anycli/test/compare/61c267f0ad0e76ce08b1015cfe76d80769bf4440...v0.10.11) (2018-02-05)
+
+
+### Bug Fixes
+
+* updated with config/command changes ([e807e19](https://github.com/anycli/test/commit/e807e19))
+
 <a name="0.10.10"></a>
 ## [0.10.10](https://github.com/anycli/test/compare/6979084b79f1c39ee6b8c2da201f70d6f0077faf...v0.10.10) (2018-02-05)
 
