@@ -1,3 +1,5 @@
+import {expect} from 'chai'
+
 /**
  * ensures that a anycli command or hook exits
  *
@@ -6,13 +8,7 @@
  */
 export default (code = 0) => ({
   run() {
+    expect(process.exitCode).to.equal(code)
     throw new Error(`Expected hook to exit with code ${code} but it ran without exiting`)
-  },
-  catch(ctx: {error: any}) {
-    const err = ctx.error
-    if (!err['cli-ux'] || typeof err['cli-ux'].exit !== 'number') throw err
-    if (err['cli-ux'].exit !== code) {
-      throw new Error(`Expected hook to exit with ${code} but exited with ${err['cli-ux'].exit}`)
-    }
   }
 })

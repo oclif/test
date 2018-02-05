@@ -4,9 +4,9 @@
   "private": true,
   "anycli": {
     "commands": "./src/commands",
-    "plugins": [
-      "@anycli/version"
-    ]
+    "hooks": {
+      "foo": "./src/hooks/foo"
+    }
   },
   "engines": {
     "node": ">=8.0.0"
