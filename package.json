@@ -5,7 +5,7 @@
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/anycli/test/issues",
   "dependencies": {
-    "fancy-test": "^0.6.10",
+    "fancy-test": "^1.0.0",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
