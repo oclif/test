@@ -1,3 +1,11 @@
+<a name="0.10.14"></a>
+## [0.10.14](https://github.com/anycli/test/compare/25f527145b8548083896f4c440cae92219ddef6c...v0.10.14) (2018-02-07)
+
+
+### Bug Fixes
+
+* async ([4b33a6c](https://github.com/anycli/test/commit/4b33a6c))
+
 <a name="0.10.13"></a>
 ## [0.10.13](https://github.com/anycli/test/compare/123a4cf6c04f1e0d86a999b8848b3034174a5c86...v0.10.13) (2018-02-07)
 
