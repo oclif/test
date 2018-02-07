@@ -1,3 +1,12 @@
+<a name="0.10.13"></a>
+## [0.10.13](https://github.com/anycli/test/compare/123a4cf6c04f1e0d86a999b8848b3034174a5c86...v0.10.13) (2018-02-07)
+
+
+### Bug Fixes
+
+* run init hook ([25f5271](https://github.com/anycli/test/commit/25f5271))
+* run init hook ([d902662](https://github.com/anycli/test/commit/d902662))
+
 <a name="0.10.12"></a>
 ## [0.10.12](https://github.com/anycli/test/compare/e807e1997757ccf16828433cab2ea29a5a8b97be...v0.10.12) (2018-02-07)
 
