@@ -7,9 +7,6 @@ export function loadConfig(opts: loadConfig.Options = {}) {
   return {
     run(ctx: {config: Config.IConfig}) {
       ctx.config = Config.load(opts.root || loadConfig.root)
-      if (opts.reset) {
-        Config.Plugin.loadedPlugins = {}
-      }
       return ctx.config
     }
   }
