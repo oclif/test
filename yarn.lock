@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@anycli/command@^1.2.15":
-  version "1.2.15"
-  resolved "https://registry.yarnpkg.com/@anycli/command/-/command-1.2.15.tgz#4eac9562ebcbcc516f6ac5c98464538f45f51cd5"
+"@anycli/command@^1.2.16":
+  version "1.2.16"
+  resolved "https://registry.yarnpkg.com/@anycli/command/-/command-1.2.16.tgz#6342f8fd19de6fe5ed010936b5b8f2a5879a81fe"
   dependencies:
     "@anycli/parser" "^3.2.6"
 
