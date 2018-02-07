@@ -5,8 +5,8 @@ import * as Config from '@anycli/config'
  */
 export function loadConfig(opts: loadConfig.Options = {}) {
   return {
-    run(ctx: {config: Config.IConfig}) {
-      ctx.config = Config.load(opts.root || loadConfig.root)
+    async run(ctx: {config: Config.IConfig}) {
+      ctx.config = await Config.load(opts.root || loadConfig.root)
       return ctx.config
     }
   }

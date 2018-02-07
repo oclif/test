@@ -16,7 +16,7 @@ import {loadConfig} from './load_config'
 export default (event?: string, hookOpts: object = {}, options: loadConfig.Options = {}) => ({
   async run(ctx: {config: Config.IConfig, expectation: string}) {
     if (!event) throw new Error('no hook provided')
-    if (!ctx.config) ctx.config = loadConfig(options).run({} as any)
+    if (!ctx.config) ctx.config = await loadConfig(options).run({} as any)
     ctx.expectation = ctx.expectation || `runs ${event} hook`
     await ctx.config.runHook(event, hookOpts || {})
   }
