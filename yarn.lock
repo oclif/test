@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@oclif/command@^1.2.19":
-  version "1.2.19"
-  resolved "https://registry.yarnpkg.com/@oclif/command/-/command-1.2.19.tgz#369204c0abf0621c19fa883f31118f6cdb9666a5"
+"@oclif/command@^1.2.20":
+  version "1.2.20"
+  resolved "https://registry.yarnpkg.com/@oclif/command/-/command-1.2.20.tgz#1330834cae3147c3319d91fba89f24576e493e5f"
   dependencies:
-    "@oclif/parser" "^3.2.6"
+    "@oclif/parser" "^3.2.8"
 
-"@oclif/config@^1.3.45":
-  version "1.3.46"
-  resolved "https://registry.yarnpkg.com/@oclif/config/-/config-1.3.46.tgz#47fcf0a89e8e9955304e880b34c48a77bc08559e"
+"@oclif/config@^1.3.47":
+  version "1.3.47"
+  resolved "https://registry.yarnpkg.com/@oclif/config/-/config-1.3.47.tgz#7e7cf7ab0634edd60bd1675260ac588e6f6521fe"
 
 "@oclif/errors@^1.0.1":
   version "1.0.1"
@@ -22,7 +22,7 @@
     strip-ansi "^4.0.0"
     wrap-ansi "^3.0.1"
 
-"@oclif/parser@^3.2.6":
+"@oclif/parser@^3.2.8":
   version "3.2.8"
   resolved "https://registry.yarnpkg.com/@oclif/parser/-/parser-3.2.8.tgz#2b2e35b5c075d200d70950923acd64e258c5ae1d"
 
