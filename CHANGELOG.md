@@ -1,3 +1,11 @@
+<a name="0.10.16"></a>
+## [0.10.16](https://github.com/oclif/test/compare/e3693460c4c91ee8e0f932b28304faaf8ce2f523...v0.10.16) (2018-02-13)
+
+
+### Bug Fixes
+
+* updated deps ([76353b9](https://github.com/oclif/test/commit/76353b9))
+
 <a name="0.10.15"></a>
 ## [0.10.15](https://github.com/anycli/test/compare/4b33a6cbc4544870f49b5dc5b7625bf388b5e083...v0.10.15) (2018-02-07)
 
