@@ -1,3 +1,11 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/oclif/test/compare/v1.0.0...v1.0.1) (2018-02-13)
+
+
+### Bug Fixes
+
+* updated deps ([65323eb](https://github.com/oclif/test/commit/65323eb))
+
 <a name="0.10.16"></a>
 ## [0.10.16](https://github.com/oclif/test/compare/e3693460c4c91ee8e0f932b28304faaf8ce2f523...v0.10.16) (2018-02-13)
 
