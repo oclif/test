@@ -1,4 +1,4 @@
-const {Command, flags} = require('@anycli/command')
+const {Command, flags} = require('@oclif/command')
 
 class CLI extends Command {
   constructor(args, opts) {

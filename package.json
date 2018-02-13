@@ -1,20 +1,20 @@
 {
-  "name": "@anycli/test",
-  "description": "test helpers for anycli components",
+  "name": "@oclif/test",
+  "description": "test helpers for oclif components",
   "version": "0.10.15",
   "author": "Jeff Dickey @jdxcode",
-  "bugs": "https://github.com/anycli/test/issues",
+  "bugs": "https://github.com/oclif/test/issues",
   "dependencies": {
     "fancy-test": "^1.0.1"
   },
   "devDependencies": {
-    "@anycli/command": "^1.2.16",
-    "@anycli/config": "^1.3.39",
-    "@anycli/errors": "^0.2.1",
-    "@anycli/tslint": "^0.2.7",
+    "@oclif/command": "^1.2.19",
+    "@oclif/config": "^1.3.45",
+    "@oclif/errors": "^1.0.1",
+    "@oclif/tslint": "^0.2.7",
     "@types/chai": "^4.1.2",
     "@types/mocha": "^2.2.48",
-    "@types/node": "^9.4.1",
+    "@types/node": "^9.4.5",
     "chai": "^4.1.2",
     "concurrently": "^3.5.1",
     "globby": "^7.1.1",
@@ -28,13 +28,13 @@
   "files": [
     "/lib"
   ],
-  "homepage": "https://github.com/anycli/test",
+  "homepage": "https://github.com/oclif/test",
   "keywords": [
-    "anycli"
+    "oclif"
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "repository": "anycli/test",
+  "repository": "oclif/test",
   "scripts": {
     "build": "rm -rf lib && tsc",
     "lint": "concurrently -p command \"tsc -p test --noEmit\" \"tslint -p test\"",

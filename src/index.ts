@@ -1,4 +1,4 @@
-import * as Config from '@anycli/config'
+import * as Config from '@oclif/config'
 import {expect, fancy, FancyTypes} from 'fancy-test'
 
 import {command} from './command'

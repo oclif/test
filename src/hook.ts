@@ -1,9 +1,9 @@
-import * as Config from '@anycli/config'
+import * as Config from '@oclif/config'
 
 import {loadConfig} from './load_config'
 
 /**
- * tests a anycli hook
+ * tests a oclif hook
  *
  * @example <caption>check that when the 'init' hook is ran it outputs "this output"</caption>
  * testHook('init', {id: 'mycommand'}, {stdout: true}, output => {
