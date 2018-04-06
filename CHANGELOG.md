@@ -1,3 +1,11 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/oclif/test/compare/ad5d869d3ca7afb926f0fbbefc8d92b6c4f1a7ba...v1.0.3) (2018-04-06)
+
+
+### Bug Fixes
+
+* fixed exit ([97986a4](https://github.com/oclif/test/commit/97986a4))
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/oclif/test/compare/65323ebfc55d4c13fb9e4bef2b961a4bc8065a4b...v1.0.2) (2018-04-06)
 
