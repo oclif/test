@@ -11,7 +11,8 @@ export default (code = 0) => ({
     expect(process.exitCode).to.equal(code)
     throw new Error(`Expected to exit with code ${code} but it ran without exiting`)
   },
-  catch(ctx: {error: Error}) {
-    expect(ctx.error.message).to.equal(`EEXIT: ${code}`)
+  catch(ctx: {error: any}) {
+    if (!ctx.error.oclif || ctx.error.oclif.exit === undefined) throw ctx.error
+    expect(ctx.error.oclif.exit).to.equal(code)
   },
 })
