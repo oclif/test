@@ -9,6 +9,9 @@ import {expect} from 'chai'
 export default (code = 0) => ({
   run() {
     expect(process.exitCode).to.equal(code)
-    throw new Error(`Expected hook to exit with code ${code} but it ran without exiting`)
-  }
+    throw new Error(`Expected to exit with code ${code} but it ran without exiting`)
+  },
+  catch(ctx: {error: Error}) {
+    expect(ctx.error.message).to.equal(`EEXIT: ${code}`)
+  },
 })
