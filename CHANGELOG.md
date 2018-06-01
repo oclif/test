@@ -1,3 +1,11 @@
+<a name="1.0.7"></a>
+## [1.0.7](https://github.com/oclif/test/compare/1073eb5982d805f92a4c0399cd18ae61576c0e3d...v1.0.7) (2018-06-01)
+
+
+### Bug Fixes
+
+* bump deps ([18433ff](https://github.com/oclif/test/commit/18433ff))
+
 <a name="1.0.6"></a>
 ## [1.0.6](https://github.com/oclif/test/compare/90e407f6cefec2416f9cf33b572db297d6901769...v1.0.6) (2018-05-01)
 
