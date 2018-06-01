@@ -1,3 +1,11 @@
+<a name="1.0.8"></a>
+## [1.0.8](https://github.com/oclif/test/compare/18433ffcb770fcb56a51040419b1a6287ddc686c...v1.0.8) (2018-06-01)
+
+
+### Bug Fixes
+
+* updated deps ([a5beadf](https://github.com/oclif/test/commit/a5beadf))
+
 <a name="1.0.7"></a>
 ## [1.0.7](https://github.com/oclif/test/compare/1073eb5982d805f92a4c0399cd18ae61576c0e3d...v1.0.7) (2018-06-01)
 
