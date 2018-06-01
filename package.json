@@ -5,11 +5,11 @@
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/oclif/test/issues",
   "dependencies": {
-    "fancy-test": "^1.1.1"
+    "fancy-test": "^1.1.2"
   },
   "devDependencies": {
-    "@oclif/command": "^1.4.31",
-    "@oclif/config": "^1.6.25",
+    "@oclif/command": "^1.4.32",
+    "@oclif/config": "^1.6.27",
     "@oclif/errors": "^1.1.2",
     "@oclif/tslint": "^1.1.2",
     "@types/chai": "^4.1.3",
