@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/oclif/test/compare/9af539d38f45f813f825a918baebfee17f9440dc...v1.2.0) (2018-08-17)
+
+
+### Features
+
+* typescript 3.0 ([08c44ba](https://github.com/oclif/test/commit/08c44ba))
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/oclif/test/compare/bb2466b47bdb57e7852c15f3d8369c296a148db3...v1.1.0) (2018-06-14)
 
