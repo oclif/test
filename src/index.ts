@@ -4,7 +4,7 @@ import {expect, fancy, FancyTypes} from 'fancy-test'
 import {command} from './command'
 import exit from './exit'
 import hook from './hook'
-import {loadConfig} from './load_config'
+import {loadConfig} from './load-config'
 
 loadConfig.root = module.parent!.filename
 

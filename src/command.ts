@@ -1,6 +1,6 @@
 import * as Config from '@oclif/config'
 
-import {loadConfig} from './load_config'
+import {loadConfig} from './load-config'
 
 export function command(args: string[] | string | undefined, opts: loadConfig.Options = {}) {
   return {

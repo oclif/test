@@ -1,6 +1,6 @@
 import * as Config from '@oclif/config'
 
-import {loadConfig} from './load_config'
+import {loadConfig} from './load-config'
 
 /**
  * tests a oclif hook
