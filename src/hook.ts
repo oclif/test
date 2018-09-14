@@ -13,7 +13,7 @@ import {loadConfig} from './load-config'
  * @param event - hook to run
  * @param hookOpts - options to pass to hook. Config object will be passed automatically.
  */
-export default (event?: string, hookOpts: object = {}, options: loadConfig.Options = {}) => ({
+export default (event: string, hookOpts: object = {}, options: loadConfig.Options = {}) => ({
   async run(ctx: {config: Config.IConfig, expectation: string}) {
     if (!event) throw new Error('no hook provided')
     if (!ctx.config) ctx.config = await loadConfig(options).run({} as any)
