@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/oclif/test/compare/v1.2.0...v1.2.1) (2018-09-14)
+
+
+### Bug Fixes
+
+* require arguments to hook and command ([38982b5](https://github.com/oclif/test/commit/38982b5))
+
 # [1.2.0](https://github.com/oclif/test/compare/9af539d38f45f813f825a918baebfee17f9440dc...v1.2.0) (2018-08-17)
 
 
