@@ -24,6 +24,10 @@ jobs:
       - run: yarn exec commitlint -- -x @commitlint/config-conventional --from origin/master
       - store_test_results: &store_test_results
           path: ~/cli/reports
+  node-10:
+    <<: *test
+    docker:
+      - image: node:10
   node-8:
     <<: *test
     docker:
