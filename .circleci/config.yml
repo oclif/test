@@ -55,6 +55,7 @@ workflows:
   "@oclif/test":
     jobs:
       - node-latest
+      - node-10
       - node-8
       - release:
           context: org-global
@@ -62,4 +63,5 @@ workflows:
             branches: {only: master}
           requires:
             - node-latest
+            - node-10
             - node-8
