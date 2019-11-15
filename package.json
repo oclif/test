@@ -11,15 +11,16 @@
     "@oclif/command": "^1.5.10",
     "@oclif/config": "^1.12.6",
     "@oclif/errors": "^1.2.2",
-    "@oclif/tslint": "^3.1.1",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.24",
     "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
     "globby": "^9.0.0",
     "mocha": "^5.2.0",
     "ts-node": "^8.0.2",
-    "tslint": "^5.12.1",
     "typescript": "3.3.3"
   },
   "engines": {
