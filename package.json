@@ -37,10 +37,11 @@
   "repository": "oclif/test",
   "scripts": {
     "build": "rm -rf lib && tsc",
-    "lint": "tsc -p test --noEmit && tslint -p test -t stylish",
-    "posttest": "yarn run lint",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "posttest": "yarn lint",
     "prepublishOnly": "yarn run build",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\""
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "pretest": "tsc -p test --noEmit"
   },
   "types": "lib/index.d.ts"
 }
