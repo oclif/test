@@ -1,9 +1,10 @@
 import {expect} from 'chai'
 
+// eslint-disable-next-line valid-jsdoc
 /**
  * ensures that a oclif command or hook exits
  *
- * @param code - expected code
+ * @param {number} code expected code
  * @default 0
  */
 export default (code = 0) => ({
