@@ -43,7 +43,7 @@
     "posttest": "yarn lint",
     "prepublishOnly": "yarn run build",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "pretest": "tsc -p test --noEmit"
+    "pretest": "yarn build --noEmit && tsc -p test --noEmit"
   },
   "types": "lib/index.d.ts"
 }
