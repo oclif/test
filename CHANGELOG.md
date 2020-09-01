@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/oclif/test/compare/v1.2.6...v1.2.7) (2020-09-01)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump eslint from 7.7.0 to 7.8.0 ([#111](https://github.com/oclif/test/issues/111)) ([2d81e06](https://github.com/oclif/test/commit/2d81e0653e0b27d6b3f6e666b63c066d789b154b))
+
 ## [1.2.2](https://github.com/oclif/test/compare/v1.2.1...v1.2.2) (2018-10-13)
 
 
