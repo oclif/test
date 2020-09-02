@@ -1,6 +1,6 @@
 import * as Config from '@oclif/config'
 
-import {loadConfig} from './load-config'
+import {loadConfig, loadConfigDirect} from './load-config'
 
 const castArray = <T>(input?: T | T[]): T[] => {
   if (input === undefined) return []
@@ -21,3 +21,24 @@ export function command(args: string[] | string, opts: loadConfig.Options = {}) 
     },
   }
 }
+
+export async function runCommand(args: string[], config?: Config.IConfig) {
+  if (!config) {
+    config = await loadConfigDirect()
+  }
+
+  args = castArray(args)
+  const [id, ...extra] = args
+
+  await config.runHook('init', {id, argv: extra})
+  await config.runCommand(id, extra)
+}
+
+export async function findCommand(id: string, config?: Config.IConfig) {
+  if (!config) {
+    config = await loadConfigDirect()
+  }
+
+  return config.findCommand(id)
+}
+

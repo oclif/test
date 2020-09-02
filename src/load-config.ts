@@ -7,7 +7,7 @@ import * as Config from '@oclif/config'
  */
 export function loadConfig(opts: loadConfig.Options = {}) {
   return {
-    async run(ctx: {config: Config.IConfig}) {
+    async run(ctx: { config: Config.IConfig }) {
       ctx.config = await Config.load(opts.root || loadConfig.root)
       return ctx.config
     },
@@ -20,4 +20,9 @@ export namespace loadConfig {
     root?: string;
     reset?: boolean;
   }
+}
+
+export async function loadConfigDirect(options?: { root?: string }) {
+  const fallback = module.parent!.filename
+  return Config.load((options && options.root) || fallback)
 }
