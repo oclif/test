@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/oclif/test/compare/v1.2.7...v1.2.8) (2020-12-02)
+
+
+### Bug Fixes
+
+* **deps:** bump fancy-test from 1.4.9 to 1.4.10 ([#126](https://github.com/oclif/test/issues/126)) ([132c914](https://github.com/oclif/test/commit/132c914d6fcfc92d6a90352706b28769c3ef22e7))
+
 ## [1.2.7](https://github.com/oclif/test/compare/v1.2.6...v1.2.7) (2020-09-01)
 
 
