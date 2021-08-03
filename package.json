@@ -8,9 +8,7 @@
     "fancy-test": "^1.4.3"
   },
   "devDependencies": {
-    "@oclif/command": "^1.6.0",
-    "@oclif/config": "^1.12.6",
-    "@oclif/errors": "^1.2.2",
+    "@oclif/core": "^0.5.27",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^8.0.0",
     "@types/node": "^14.0.14",
@@ -21,6 +19,7 @@
     "globby": "^11.0.1",
     "mocha": "^8.2.1",
     "nock": "^13.0.1",
+    "shx": "^0.3.3",
     "ts-node": "^9.0.0",
     "typescript": "3.8.3"
   },
@@ -38,7 +37,7 @@
   "main": "lib/index.js",
   "repository": "oclif/test",
   "scripts": {
-    "build": "rm -rf lib && tsc",
+    "build": "shx rm -rf lib && tsc",
     "lint": "eslint . --ext .ts --config .eslintrc",
     "posttest": "yarn lint",
     "prepublishOnly": "yarn run build",

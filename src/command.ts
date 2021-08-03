@@ -1,4 +1,4 @@
-import * as Config from '@oclif/config'
+import {Interfaces} from '@oclif/core'
 
 import {loadConfig} from './load-config'
 
@@ -9,7 +9,7 @@ const castArray = <T>(input?: T | T[]): T[] => {
 
 export function command(args: string[] | string, opts: loadConfig.Options = {}) {
   return {
-    async run(ctx: {config: Config.IConfig; expectation: string}) {
+    async run(ctx: {config: Interfaces.Config; expectation: string}) {
       // eslint-disable-next-line require-atomic-updates
       if (!ctx.config || opts.reset) ctx.config = await loadConfig(opts).run({} as any)
       args = castArray(args)

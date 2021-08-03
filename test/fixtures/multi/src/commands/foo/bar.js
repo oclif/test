@@ -1,4 +1,4 @@
-const {Command, flags} = require('@oclif/command')
+const {Command, Flags} = require('@oclif/core')
 
 class CLI extends Command {
   constructor(args, opts) {
@@ -6,14 +6,14 @@ class CLI extends Command {
   }
 
   async run() {
-    const {flags} = this.parse(CLI)
+    const {flags} = await this.parse(CLI)
     const name = flags.name || 'world'
     this.log(`hello ${name}!`)
   }
 }
 
 CLI.flags = {
-  name: flags.string({char: 'n', description: 'name to print'}),
+  name: Flags.string({char: 'n', description: 'name to print'}),
 }
 
 module.exports = CLI

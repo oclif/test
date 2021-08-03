@@ -1,13 +1,13 @@
-import * as Config from '@oclif/config'
+import {Interfaces, Config} from '@oclif/core'
 
 /**
  * loads CLI plugin/multi config
  * @param {loadConfig.Options} opts options
- * @return {Promise<Config.IConfig>} config
+ * @return {Promise<Interfaces.Config>} config
  */
 export function loadConfig(opts: loadConfig.Options = {}) {
   return {
-    async run(ctx: {config: Config.IConfig}) {
+    async run(ctx: {config: Interfaces.Config}) {
       ctx.config = await Config.load(opts.root || loadConfig.root)
       return ctx.config
     },
