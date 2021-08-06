@@ -1,4 +1,4 @@
-import * as Config from '@oclif/config'
+import {Config} from '@oclif/core'
 import {expect, fancy, FancyTypes} from 'fancy-test'
 
 import {command} from './command'
