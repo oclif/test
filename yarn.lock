@@ -98,9 +98,9 @@
     tslib "^2.0.0"
 
 "@oclif/core@^0.5.27":
-  version "0.5.27"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-0.5.27.tgz#d06630d915c746076d34473d6e4772580811dd72"
-  integrity sha512-BfS4REDHx1mr7RnitYkznIQ5fzLBCf0fRbyB/dqgMNPhAVsdzQpjobn5x+dMdcsLhO+2iXisfoMl+x0j9AB9bw==
+  version "0.5.39"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-0.5.39.tgz#d00705f31c5e6617145e84bb9dd50156cf3b01c5"
+  integrity sha512-4XusxLX8PnHDQxtRP25PImlkIj1Mlx6wt0NWb1FxQGvTJOAgXGJZl3YB02ZeXZLYbeKA2A3AqqxFTTKbADnZng==
   dependencies:
     "@oclif/linewrap" "^1.0.0"
     chalk "^4.1.0"
