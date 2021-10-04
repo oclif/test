@@ -1,3 +1,29 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [2.0.1](https://github.com/oclif/test/compare/v1.2.8...v2.0.1) (2021-10-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* require node 12+ (#189)
+* update to oclif/core
+
+### Bug Fixes
+
+* ci ([3297d16](https://github.com/oclif/test/commit/3297d16beeb7fb1b1766584a4f55cb6a1b12519d))
+* release-process ([1d414db](https://github.com/oclif/test/commit/1d414db733e41c630690420e7c8da1610855a4a6))
+* trigger release ([65bd420](https://github.com/oclif/test/commit/65bd420c7e575e27fab56751f1b4f2bc4d6ecc75))
+
+
+* Merge pull request #179 from oclif/re/oclif-core ([fedc128](https://github.com/oclif/test/commit/fedc128a6df0fe5aca2a520764f0261af3aadfa4)), closes [#179](https://github.com/oclif/test/issues/179)
+
+
+### build
+
+* require node 12+ ([#189](https://github.com/oclif/test/issues/189)) ([04ac33e](https://github.com/oclif/test/commit/04ac33e34bf5acf9e5cde3f4d8780861d0504b3b))
+
 ## [1.2.8](https://github.com/oclif/test/compare/v1.2.7...v1.2.8) (2020-12-02)
 
 
