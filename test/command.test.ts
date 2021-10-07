@@ -9,7 +9,11 @@ describe('command', () => {
   .loadConfig({root})
   .stdout()
   .command(['foo:bar'])
-  .do(output => expect(output.stdout).to.equal('hello world!\n'))
+  .do(output => {
+    expect(output.stdout).to.equal('hello world!\n')
+    let {name} = output.returned as {name: string}
+    expect(name).to.equal('world')
+  })
   .it()
 
   test

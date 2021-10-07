@@ -9,7 +9,7 @@ const castArray = <T>(input?: T | T[]): T[] => {
 
 export function command(args: string[] | string, opts: loadConfig.Options = {}) {
   return {
-    async run(ctx: {config: Interfaces.Config; expectation: string}) {
+    async run(ctx: {config: Interfaces.Config; expectation: string; returned: unknown}) {
       // eslint-disable-next-line require-atomic-updates
       if (!ctx.config || opts.reset) ctx.config = await loadConfig(opts).run({} as any)
       args = castArray(args)
@@ -17,7 +17,8 @@ export function command(args: string[] | string, opts: loadConfig.Options = {}) 
       // eslint-disable-next-line require-atomic-updates
       ctx.expectation = ctx.expectation || `runs ${args.join(' ')}`
       await ctx.config.runHook('init', {id, argv: extra})
-      await ctx.config.runCommand(id, extra)
+      // eslint-disable-next-line require-atomic-updates
+      ctx.returned = await ctx.config.runCommand(id, extra)
     },
   }
 }

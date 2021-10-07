@@ -9,6 +9,7 @@ class CLI extends Command {
     const {flags} = await this.parse(CLI)
     const name = flags.name || 'world'
     this.log(`hello ${name}!`)
+    return {name}
   }
 }
 
