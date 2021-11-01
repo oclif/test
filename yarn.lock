@@ -97,10 +97,10 @@
     is-wsl "^2.1.1"
     tslib "^2.0.0"
 
-"@oclif/core@^0.5.27":
-  version "0.5.27"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-0.5.27.tgz#d06630d915c746076d34473d6e4772580811dd72"
-  integrity sha512-BfS4REDHx1mr7RnitYkznIQ5fzLBCf0fRbyB/dqgMNPhAVsdzQpjobn5x+dMdcsLhO+2iXisfoMl+x0j9AB9bw==
+"@oclif/core@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.0.2.tgz#f8f4eb12ff5adceb0a7ed262e9f5d46bbef1bf4f"
+  integrity sha512-5Qd4D+OkhCPLNML8S/LEu78CPbnd4hfsF+/7fzAnyUD4U3P+F+/Lnx/b/AnaXw6U8CPjSNO+sod0C+QpqTN13A==
   dependencies:
     "@oclif/linewrap" "^1.0.0"
     chalk "^4.1.0"
