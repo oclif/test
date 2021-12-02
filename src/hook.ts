@@ -14,7 +14,7 @@ import {loadConfig} from './load-config'
  * @param {string} event hook to run
  * @param {object} hookOpts options to pass to hook. Config object will be passed automatically.
  */
-export default (event: string, hookOpts: object = {}, options: loadConfig.Options = {}) => ({
+export default (event: string, hookOpts: Record<string, unknown> = {}, options: loadConfig.Options = {}) => ({
   async run(ctx: {config: Interfaces.Config; expectation: string}) {
     if (!event) throw new Error('no hook provided')
     // eslint-disable-next-line require-atomic-updates
