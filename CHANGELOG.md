@@ -1,3 +1,11 @@
+## [1.2.9](https://github.com/oclif/test/compare/v1.2.8...v1.2.9) (2021-12-08)
+
+
+### Bug Fixes
+
+* remove dep on lodash.template ([c1cff20](https://github.com/oclif/test/commit/c1cff205602e87a342d8d6b184aff8ce425f51ac))
+* update curcle context ([8a7b80a](https://github.com/oclif/test/commit/8a7b80a51080c309f3c90e35890d57f9a1390e3b))
+
 ## [1.2.8](https://github.com/oclif/test/compare/v1.2.7...v1.2.8) (2020-12-02)
 
 
