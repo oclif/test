@@ -3,5 +3,10 @@
     "oclif",
     "oclif-typescript"
   ],
-  "rules": {}
+  "rules": {
+    "unicorn/import-style": "warn",
+    "unicorn/prefer-node-protocol": "off",
+    "unicorn/prefer-module": "off",
+    "node/no-missing-import": "off"
+  }
 }

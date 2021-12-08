@@ -34,8 +34,8 @@ describe('stdout + stderr', () => {
   })
 })
 
-const os = ['darwin', 'win32', 'linux']
-os.forEach(os => {
+const oses = ['darwin', 'win32', 'linux']
+for (const os of oses) {
   describe(os, () => {
     test
     .stub(OS, 'platform', () => os)
@@ -43,4 +43,4 @@ os.forEach(os => {
       expect(OS.platform()).to.equal(os)
     })
   })
-})
+}
