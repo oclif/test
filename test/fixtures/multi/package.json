@@ -4,6 +4,7 @@
   "private": true,
   "oclif": {
     "commands": "./src/commands",
+    "topicSeparator": " ",
     "hooks": {
       "foo": "./src/hooks/foo"
     }
