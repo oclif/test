@@ -1,4 +1,4 @@
-import {Interfaces} from '@oclif/core'
+import {Interfaces, toStandardizedId} from '@oclif/core'
 
 import {loadConfig} from './load-config'
 
@@ -7,17 +7,20 @@ const castArray = <T>(input?: T | T[]): T[] => {
   return Array.isArray(input) ? input : [input]
 }
 
-export function command(args: string[] | string, opts: loadConfig.Options = {}) {
+export function command(args: string[] | string, opts: loadConfig.Options = {}): {
+  run(ctx: {
+    config: Interfaces.Config; expectation: string
+  }): Promise<void>
+} {
   return {
     async run(ctx: {config: Interfaces.Config; expectation: string}) {
-      // eslint-disable-next-line require-atomic-updates
       if (!ctx.config || opts.reset) ctx.config = await loadConfig(opts).run({} as any)
       args = castArray(args)
       const [id, ...extra] = args
-      // eslint-disable-next-line require-atomic-updates
+      const cmdId = toStandardizedId(id, ctx.config)
       ctx.expectation = ctx.expectation || `runs ${args.join(' ')}`
-      await ctx.config.runHook('init', {id, argv: extra})
-      await ctx.config.runCommand(id, extra)
+      await ctx.config.runHook('init', {id: cmdId, argv: extra})
+      await ctx.config.runCommand(cmdId, extra)
     },
   }
 }

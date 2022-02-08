@@ -5,10 +5,12 @@ import {Interfaces, Config} from '@oclif/core'
  * @param {loadConfig.Options} opts options
  * @return {Promise<Interfaces.Config>} config
  */
-export function loadConfig(opts: loadConfig.Options = {}) {
+export function loadConfig(opts: loadConfig.Options = {}): { run(ctx: { config: Interfaces.Config}): Promise<Interfaces.Config> } {
   return {
     async run(ctx: {config: Interfaces.Config}) {
       ctx.config = await Config.load(opts.root || loadConfig.root)
+      // Always set the topicSeparator to a space so that users can write their tests using either spaces or colons
+      ctx.config.topicSeparator = ' '
       return ctx.config
     },
   }
