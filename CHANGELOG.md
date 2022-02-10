@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/oclif/test/compare/v2.0.3...v2.1.0) (2022-02-10)
+
+
+### Features
+
+* support commands with spaces ([531f8e0](https://github.com/oclif/test/commit/531f8e08e101e084a050410a6d63ac28c3277de9))
+
 ### [2.0.3](https://github.com/oclif/test/compare/v2.0.2...v2.0.3) (2021-12-08)
 
 
