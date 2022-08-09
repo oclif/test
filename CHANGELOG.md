@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/oclif/test/compare/v2.1.0...v2.1.1) (2022-08-09)
+
+
+### Bug Fixes
+
+* set NODE_ENV to test ([00af914](https://github.com/oclif/test/commit/00af914ac4e41b95ffc9030d81f69a74aef6b1ad))
+
 ## [2.1.0](https://github.com/oclif/test/compare/v2.0.3...v2.1.0) (2022-02-10)
 
 
