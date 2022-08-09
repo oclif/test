@@ -13,6 +13,7 @@ export const test = fancy
 .register('command', command)
 .register('exit', exit)
 .register('hook', hook)
+.env({NODE_ENV: 'test'})
 
 export default test
 
