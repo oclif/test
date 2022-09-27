@@ -3,11 +3,12 @@ import {expect} from 'chai'
 // eslint-disable-next-line valid-jsdoc
 /**
  * ensures that a oclif command or hook exits
- *
- * @param {number} code expected code
- * @default 0
  */
-export default (code = 0) => ({
+export default (code = 0): {
+  run(): never; catch(ctx: {
+    error: any
+  }): void
+} => ({
   run() {
     expect(process.exitCode).to.equal(code)
     throw new Error(`Expected to exit with code ${code} but it ran without exiting`)
