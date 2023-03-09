@@ -1,3 +1,12 @@
+## [2.3.10](https://github.com/oclif/test/compare/2.3.9...2.3.10) (2023-03-09)
+
+
+### Bug Fixes
+
+* bump core to pick up config changes ([b124aed](https://github.com/oclif/test/commit/b124aed4de24f6f665d2dded394871dee486b2bc))
+
+
+
 ## [2.3.9](https://github.com/oclif/test/compare/2.3.8...2.3.9) (2023-03-05)
 
 
