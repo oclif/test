@@ -5,8 +5,8 @@
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/test/issues",
   "dependencies": {
-    "@oclif/core": "^2.4.0",
-    "fancy-test": "^2.0.12"
+    "@oclif/core": "^2.6.2",
+    "fancy-test": "^2.0.13"
   },
   "devDependencies": {
     "@types/chai": "^4.3.4",
