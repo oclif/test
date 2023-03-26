@@ -1,3 +1,12 @@
+## [2.3.12](https://github.com/oclif/test/compare/2.3.11...2.3.12) (2023-03-26)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 2.6.4 to 2.7.1 ([30dd866](https://github.com/oclif/test/commit/30dd866a1b19fe8cd2dcb90902cea0119d10f04e))
+
+
+
 ## [2.3.11](https://github.com/oclif/test/compare/2.3.10...2.3.11) (2023-03-19)
 
 
