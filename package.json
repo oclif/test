@@ -1,7 +1,7 @@
 {
   "name": "@oclif/test",
   "description": "test helpers for oclif components",
-  "version": "2.3.12",
+  "version": "2.3.13",
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/test/issues",
   "dependencies": {
