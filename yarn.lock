@@ -1169,10 +1169,10 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
-fancy-test@^2.0.25:
-  version "2.0.25"
-  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-2.0.25.tgz#9a0578a4820460cb2c1250dfb48d4664ca59c83a"
-  integrity sha512-4OKW+SC62aP3Y19YlCWxjKJD0iW4kjLqUvdd9OaW1lM7Co/FX3PTi2NHguzsj2vmPs/6mMITKu0saYAr2uZA4g==
+fancy-test@^2.0.26:
+  version "2.0.26"
+  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-2.0.26.tgz#2f39aac615c73da100740d347553542721aac11d"
+  integrity sha512-VZnjjta4hYLCjqrdOKgR42dHZ/IBdQKYctLNooXuoXYGU7esLoFC+memPgGgBFZ5nTpWqUGddnwl3GTgbEWvxA==
   dependencies:
     "@types/chai" "*"
     "@types/lodash" "*"
