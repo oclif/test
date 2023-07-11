@@ -1,3 +1,12 @@
+## [2.3.28](https://github.com/oclif/test/compare/2.3.27...2.3.28) (2023-07-11)
+
+
+### Bug Fixes
+
+* **deps:** bump semver from 5.7.1 to 5.7.2 ([c6dcf30](https://github.com/oclif/test/commit/c6dcf30173731342d73299dc0321aacc9770ae1a))
+
+
+
 ## [2.3.27](https://github.com/oclif/test/compare/2.3.26...2.3.27) (2023-07-09)
 
 
