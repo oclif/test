@@ -1,3 +1,12 @@
+## [2.3.31](https://github.com/oclif/test/compare/2.3.30...2.3.31) (2023-07-19)
+
+
+### Bug Fixes
+
+* **deps:** bump word-wrap from 1.2.3 to 1.2.4 ([be67828](https://github.com/oclif/test/commit/be6782800f8e97d300e73e073aea9e814a82ddc8))
+
+
+
 ## [2.3.30](https://github.com/oclif/test/compare/2.3.29...2.3.30) (2023-07-16)
 
 
