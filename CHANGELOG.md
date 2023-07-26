@@ -1,3 +1,12 @@
+# [2.4.0](https://github.com/oclif/test/compare/2.3.33...2.4.0) (2023-07-26)
+
+
+### Features
+
+* remove deprecated module.parent ([ca06eef](https://github.com/oclif/test/commit/ca06eef36e16bc55d9c09a2070f27359ee5d053d))
+
+
+
 ## [2.3.33](https://github.com/oclif/test/compare/2.3.32...2.3.33) (2023-07-23)
 
 
