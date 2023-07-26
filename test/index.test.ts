@@ -1,7 +1,3 @@
-// tslint:disable no-console
-
-import * as OS from 'os'
-
 import {expect, test} from '../src'
 
 describe('stdout', () => {
@@ -34,12 +30,19 @@ describe('stdout + stderr', () => {
   })
 })
 
+// eslint-disable-next-line unicorn/no-static-only-class
+class MockOs {
+  static platform() {
+    return 'not-a-platform'
+  }
+}
+
 for (const os of ['darwin', 'win32', 'linux']) {
   describe(os, () => {
     test
-    .stub(OS, 'platform', () => os)
+    .stub(MockOs, 'platform', () => os)
     .end('sets os', () => {
-      expect(OS.platform()).to.equal(os)
+      expect(MockOs.platform()).to.equal(os)
     })
   })
 }
