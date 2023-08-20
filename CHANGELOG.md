@@ -1,3 +1,12 @@
+## [2.4.6](https://github.com/oclif/test/compare/2.4.5...2.4.6) (2023-08-20)
+
+
+### Bug Fixes
+
+* **deps:** bump fancy-test from 2.0.33 to 2.0.34 ([11ff53e](https://github.com/oclif/test/commit/11ff53eafc29d9302f914af04567a58ddabe495b))
+
+
+
 ## [2.4.5](https://github.com/oclif/test/compare/2.4.4...2.4.5) (2023-08-13)
 
 
