@@ -1,3 +1,12 @@
+## [2.5.1](https://github.com/oclif/test/compare/2.5.0...2.5.1) (2023-08-31)
+
+
+### Reverts
+
+* Revert "feat: use core v3" ([bd267ec](https://github.com/oclif/test/commit/bd267ec1b6bf86985165ec328b8e32363b5615a3))
+
+
+
 # [2.5.0](https://github.com/oclif/test/compare/2.4.8...2.5.0) (2023-08-31)
 
 
