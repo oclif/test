@@ -1,3 +1,12 @@
+# [2.5.0](https://github.com/oclif/test/compare/2.4.8...2.5.0) (2023-08-31)
+
+
+### Features
+
+* use core v3 ([c1ec8be](https://github.com/oclif/test/commit/c1ec8bebf24eb0312b8059185885311963614eb2))
+
+
+
 ## [2.4.8](https://github.com/oclif/test/compare/2.4.7...2.4.8) (2023-08-27)
 
 
