@@ -1,3 +1,12 @@
+## [2.5.3](https://github.com/oclif/test/compare/2.5.2...2.5.3) (2023-09-03)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 2.11.10 to 2.15.0 ([ef1b12b](https://github.com/oclif/test/commit/ef1b12ba88d61556367bc7418f7db647f8b696cc))
+
+
+
 ## [2.5.2](https://github.com/oclif/test/compare/2.5.1...2.5.2) (2023-09-03)
 
 
