@@ -9,7 +9,7 @@
     "fancy-test": "^2.0.37"
   },
   "devDependencies": {
-    "@types/chai": "^4.3.5",
+    "@types/chai": "^4.3.6",
     "@types/mocha": "^9.1.1",
     "@types/node": "^14.18.58",
     "chai": "^4.3.8",
