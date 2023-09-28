@@ -1,9 +1,9 @@
-import * as path from 'path'
+import {join} from 'node:path'
 
 import {expect, test} from '../src'
 
 // eslint-disable-next-line unicorn/prefer-module
-const root = path.join(__dirname, 'fixtures/multi')
+const root = join(__dirname, 'fixtures/multi')
 
 describe('command', () => {
   test

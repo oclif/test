@@ -40,7 +40,7 @@ class MockOs {
 for (const os of ['darwin', 'win32', 'linux']) {
   describe(os, () => {
     test
-    .stub(MockOs, 'platform', () => os)
+    .stub(MockOs, 'platform', stub => stub.returns(os))
     .end('sets os', () => {
       expect(MockOs.platform()).to.equal(os)
     })

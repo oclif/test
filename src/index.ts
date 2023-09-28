@@ -1,7 +1,6 @@
-import path from 'path'
+import {dirname} from 'node:path'
 
-import {Config} from '@oclif/core'
-import {expect, fancy, FancyTypes} from 'fancy-test'
+import {fancy} from 'fancy-test'
 
 import {command} from './command'
 import exit from './exit'
@@ -11,7 +10,7 @@ import {loadConfig} from './load-config'
 function traverseFilePathUntil(filename: string, predicate: (filename: string) => boolean): string {
   let current = filename
   while (!predicate(current)) {
-    current = path.dirname(current)
+    current = dirname(current)
   }
 
   return current
@@ -30,9 +29,7 @@ export const test = fancy
 
 export default test
 
-export {
-  expect,
-  FancyTypes,
-  Config,
-  command,
-}
+export {Config} from '@oclif/core'
+export {expect, FancyTypes} from 'fancy-test'
+
+export {command} from './command'
