@@ -1,3 +1,12 @@
+## [3.0.1](https://github.com/oclif/test/compare/3.0.0...3.0.1) (2023-09-28)
+
+
+### Bug Fixes
+
+* chai as an explicit dependency ([#389](https://github.com/oclif/test/issues/389)) ([435a2e2](https://github.com/oclif/test/commit/435a2e297a29fab8e4b3b0ae6669609cf23d3696))
+
+
+
 # [3.0.0](https://github.com/oclif/test/compare/2.5.6...3.0.0) (2023-09-28)
 
 
