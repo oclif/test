@@ -1,3 +1,27 @@
+# [3.0.0](https://github.com/oclif/test/compare/2.5.6...3.0.0) (2023-09-28)
+
+
+* feat!: version 3 (#387) ([dd9a700](https://github.com/oclif/test/commit/dd9a700f2398d253f16027b641409de3cf0d9b17)), closes [#387](https://github.com/oclif/test/issues/387)
+
+
+### BREAKING CHANGES
+
+* node 18+, fancy-test v3
+
+* chore: update github workflows
+
+* chore(release): 2.5.7-beta.0 [skip ci]
+
+* chore: major version bump
+
+* chore(release): 3.0.0-beta.1 [skip ci]
+
+* chore: pass token to automerge
+
+* chore: bump chai to resolve dependabot vuln
+
+
+
 ## [2.5.6](https://github.com/oclif/test/compare/2.5.5...2.5.6) (2023-09-24)
 
 
