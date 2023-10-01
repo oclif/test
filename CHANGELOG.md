@@ -1,3 +1,12 @@
+## [3.0.2](https://github.com/oclif/test/compare/3.0.1...3.0.2) (2023-10-01)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 3.0.0-beta.17 to 3.0.0-beta.19 ([70e6e0e](https://github.com/oclif/test/commit/70e6e0ecdc760f183523bd94438b767b0a53387d))
+
+
+
 ## [3.0.1](https://github.com/oclif/test/compare/3.0.0...3.0.1) (2023-09-28)
 
 
