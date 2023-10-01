@@ -125,10 +125,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@oclif/core@^3.0.0-beta.17":
-  version "3.0.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-3.0.0-beta.17.tgz#a6f0d22703647743aba6c9e53f0560724aba3ccb"
-  integrity sha512-knoDpfAVYgbVeuoUpX/es8os1GeVp//gNczB3mgNPotENXMALOZKgIv7rBbKpHa1xmpGdEf0n31WrBq3HigKwQ==
+"@oclif/core@^3.0.0-beta.19":
+  version "3.0.0-beta.19"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-3.0.0-beta.19.tgz#b5c93edcc86e50cc8db330f72fb9a4e981bb0721"
+  integrity sha512-bLxIzFocemP+qUXRFjJ03MDCP+W4Cm3favoYUpf8JkuvuBqrPsZD1+tqZUUtnIq2FPeYAG8UcXfkOxo7qJFRRQ==
   dependencies:
     "@types/cli-progress" "^3.11.0"
     ansi-escapes "^4.3.2"
