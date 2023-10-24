@@ -1,3 +1,12 @@
+## [3.0.3](https://github.com/oclif/test/compare/3.0.2...3.0.3) (2023-10-24)
+
+
+### Bug Fixes
+
+* use es2022 ([9040835](https://github.com/oclif/test/commit/9040835ea0324e99d8985da5a5b26dd62e0788a1))
+
+
+
 ## [3.0.2](https://github.com/oclif/test/compare/3.0.1...3.0.2) (2023-10-01)
 
 
