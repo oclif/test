@@ -17,18 +17,18 @@ function traverseFilePathUntil(filename: string, predicate: (filename: string) =
 
 // Update to path.dirname(url.fileURLToPath(import.meta.url)) whenever we update tsconfig target to ES2020
 // eslint-disable-next-line unicorn/prefer-module
-loadConfig.root = traverseFilePathUntil(require.main?.path ?? module.path, p => !p.includes('node_modules'))
+loadConfig.root = traverseFilePathUntil(require.main?.path ?? module.path, (p) => !p.includes('node_modules'))
 
 export const test = fancy
-.register('loadConfig', loadConfig)
-.register('command', command)
-.register('exit', exit)
-.register('hook', hook)
-.env({NODE_ENV: 'test'})
+  .register('loadConfig', loadConfig)
+  .register('command', command)
+  .register('exit', exit)
+  .register('hook', hook)
+  .env({NODE_ENV: 'test'})
 
 export default test
 
 export {command} from './command'
-export {Config} from '@oclif/core'
 
+export {Config} from '@oclif/core'
 export {FancyTypes, expect} from 'fancy-test'

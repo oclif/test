@@ -9,7 +9,7 @@
     "pretty": true,
     "rootDirs": ["./src"],
     "strict": true,
-    "target": "es2017",
+    "target": "es2022",
     "esModuleInterop": true
   },
   "include": ["./src/**/*"]
