@@ -1,6 +1,5 @@
-import {dirname} from 'node:path'
-
 import {fancy} from 'fancy-test'
+import {dirname} from 'node:path'
 
 import {command} from './command'
 import exit from './exit'
@@ -29,7 +28,7 @@ export const test = fancy
 
 export default test
 
-export {Config} from '@oclif/core'
-export {expect, FancyTypes} from 'fancy-test'
-
 export {command} from './command'
+export {Config} from '@oclif/core'
+
+export {FancyTypes, expect} from 'fancy-test'
