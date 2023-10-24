@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "oclif",
-    "oclif-typescript"
-  ],
+  "extends": ["oclif", "oclif-typescript", "prettier"],
   "rules": {
     "unicorn/import-style": 1,
     "unicorn/prefer-node-protocol": 0

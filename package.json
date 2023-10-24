@@ -5,22 +5,29 @@
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/test/issues",
   "dependencies": {
-    "@oclif/core": "^3.0.0-beta.19",
+    "@oclif/core": "^3.6.0",
     "chai": "^4.3.10",
     "fancy-test": "^3.0.1"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^18.0.0",
+    "@oclif/prettier-config": "^0.2.1",
+    "@types/cli-progress": "^3.11.4",
     "@types/mocha": "^10",
     "@types/node": "^18",
+    "commitlint": "^18.0.0",
     "eslint": "^8.52.0",
     "eslint-config-oclif": "^5.0.0",
-    "eslint-config-oclif-typescript": "^2.0.1",
+    "eslint-config-oclif-typescript": "^3.0.8",
+    "eslint-config-prettier": "^9.0.0",
     "globby": "^11.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "mocha": "^10",
     "nock": "^13.3.6",
+    "prettier": "^3.0.3",
     "shx": "^0.3.3",
     "ts-node": "^10.9.1",
-    "tslib": "^2.6.2",
     "typescript": "^5"
   },
   "engines": {
@@ -40,9 +47,10 @@
     "build": "shx rm -rf lib && tsc",
     "lint": "eslint . --ext .ts",
     "posttest": "yarn lint",
+    "prepare": "husky install",
     "prepublishOnly": "yarn run build",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "pretest": "yarn build --noEmit && tsc -p test --noEmit"
+    "pretest": "yarn build --noEmit && tsc -p test --noEmit",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\""
   },
   "types": "lib/index.d.ts"
 }
