@@ -1,3 +1,12 @@
+# [3.1.0](https://github.com/oclif/test/compare/3.0.4...3.1.0) (2023-11-01)
+
+
+### Features
+
+* add examples to README ([d5bf7ae](https://github.com/oclif/test/commit/d5bf7aef72cf41c1884e774eaec9e97bb93a21ea))
+
+
+
 ## [3.0.4](https://github.com/oclif/test/compare/3.0.3...3.0.4) (2023-10-29)
 
 
