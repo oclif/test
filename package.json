@@ -12,7 +12,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^18.1.0",
     "@oclif/prettier-config": "^0.2.1",
-    "@types/cli-progress": "^3.11.4",
+    "@types/cli-progress": "^3.11.5",
     "@types/mocha": "^10",
     "@types/node": "^18",
     "commitlint": "^18.2.0",
