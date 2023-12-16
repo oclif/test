@@ -15,7 +15,7 @@
     "@types/cli-progress": "^3.11.5",
     "@types/mocha": "^10",
     "@types/node": "^18",
-    "commitlint": "^18.4.2",
+    "commitlint": "^18.4.3",
     "eslint": "^8.55.0",
     "eslint-config-oclif": "^5.0.0",
     "eslint-config-oclif-typescript": "^3.0.24",
