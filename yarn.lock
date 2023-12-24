@@ -1669,10 +1669,10 @@ execa@^5.0.0:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
-fancy-test@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-3.0.4.tgz#a84e4d3ce57f798e76a7ca3bd2fb0a26d097e11e"
-  integrity sha512-3hbcXxIcNeb1/EHUK7ol2PzC46CnfucQWoWeTb2J0CA692AdTjVYEXoJSKGKAOhgoNjmY8EusWPhx0i097+9DA==
+fancy-test@^3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-3.0.7.tgz#fae77b3fe8147928ba1d409be8bf9e57137b6cf3"
+  integrity sha512-U5cUkSqUfK1yqaUd7wPfXzOAOj6xXUMSO/OPQq9/nU3bt1kSbY+x5Xbw2u/pFXxqmmBoi4C5rleHvEhyLoo1uA==
   dependencies:
     "@types/chai" "*"
     "@types/lodash" "*"
@@ -1680,8 +1680,8 @@ fancy-test@^3.0.4:
     "@types/sinon" "*"
     lodash "^4.17.13"
     mock-stdin "^1.0.0"
-    nock "^13.3.3"
-    sinon "^16.0.0"
+    nock "^13.4.0"
+    sinon "^16.1.3"
     stdout-stderr "^0.1.9"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
@@ -2779,7 +2779,7 @@ nise@^5.1.4:
     just-extend "^4.0.2"
     path-to-regexp "^1.7.0"
 
-nock@^13.3.3, nock@^13.4.0:
+nock@^13.4.0:
   version "13.4.0"
   resolved "https://registry.yarnpkg.com/nock/-/nock-13.4.0.tgz#60aa3f7a4afa9c12052e74d8fb7550f682ef0115"
   integrity sha512-W8NVHjO/LCTNA64yxAPHV/K47LpGYcVzgKd3Q0n6owhwvD0Dgoterc25R4rnZbckJEb6Loxz1f5QMuJpJnbSyQ==
@@ -3343,7 +3343,7 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-sinon@^16.0.0:
+sinon@^16.1.3:
   version "16.1.3"
   resolved "https://registry.yarnpkg.com/sinon/-/sinon-16.1.3.tgz#b760ddafe785356e2847502657b4a0da5501fba8"
   integrity sha512-mjnWWeyxcAf9nC0bXcPmiDut+oE8HYridTNzBbF98AYVLmWwGRp2ISEpyhYflG1ifILT+eNn3BmKUJPxjXUPlA==
