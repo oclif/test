@@ -7,7 +7,7 @@
   "dependencies": {
     "@oclif/core": "^3.15.1",
     "chai": "^4.3.10",
-    "fancy-test": "^3.0.7"
+    "fancy-test": "^3.0.8"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^18.4.3",
