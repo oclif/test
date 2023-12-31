@@ -1670,10 +1670,10 @@ execa@^5.0.0:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
-fancy-test@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-3.0.7.tgz#fae77b3fe8147928ba1d409be8bf9e57137b6cf3"
-  integrity sha512-U5cUkSqUfK1yqaUd7wPfXzOAOj6xXUMSO/OPQq9/nU3bt1kSbY+x5Xbw2u/pFXxqmmBoi4C5rleHvEhyLoo1uA==
+fancy-test@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-3.0.8.tgz#ca3919ebb07c1c0e5fb8e8953e02e2ed48600ef8"
+  integrity sha512-vHkT59Kf0Byiqzwc2My1fD9VDYsAPkT+jVqdMqqtwtdLwz19x+hHI2oAxNwfyfEDSK+VrLB4+B96sZbOLVEHdA==
   dependencies:
     "@types/chai" "*"
     "@types/lodash" "*"
