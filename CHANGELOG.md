@@ -1,3 +1,12 @@
+## [3.1.8](https://github.com/oclif/test/compare/3.1.7...3.1.8) (2023-12-31)
+
+
+### Bug Fixes
+
+* **deps:** bump fancy-test from 3.0.7 to 3.0.8 ([1ac190d](https://github.com/oclif/test/commit/1ac190da914ffe27ebdcffec5deefc33e6b31339))
+
+
+
 ## [3.1.7](https://github.com/oclif/test/compare/3.1.6...3.1.7) (2023-12-24)
 
 
