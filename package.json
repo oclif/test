@@ -10,7 +10,7 @@
     "fancy-test": "^3.0.8"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.4",
     "@oclif/prettier-config": "^0.2.1",
     "@types/cli-progress": "^3.11.5",
     "@types/mocha": "^10",
