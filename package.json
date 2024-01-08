@@ -6,7 +6,7 @@
   "bugs": "https://github.com/oclif/test/issues",
   "dependencies": {
     "@oclif/core": "^3.16.0",
-    "chai": "^4.3.10",
+    "chai": "^4.4.0",
     "fancy-test": "^3.0.8"
   },
   "devDependencies": {
