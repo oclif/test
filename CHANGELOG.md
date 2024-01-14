@@ -1,3 +1,12 @@
+## [3.1.12](https://github.com/oclif/test/compare/3.1.11...3.1.12) (2024-01-14)
+
+
+### Bug Fixes
+
+* **deps:** bump chai from 4.4.0 to 4.4.1 ([3f2cf0f](https://github.com/oclif/test/commit/3f2cf0fd5a166aece739f210ffa7c19cb4318d52))
+
+
+
 ## [3.1.11](https://github.com/oclif/test/compare/3.1.10...3.1.11) (2024-01-14)
 
 
