@@ -22,7 +22,7 @@
     "eslint-config-prettier": "^9.1.0",
     "globby": "^11.0.1",
     "husky": "^8.0.3",
-    "lint-staged": "^15.2.1",
+    "lint-staged": "^15.2.2",
     "mocha": "^10",
     "nock": "^13.5.1",
     "prettier": "^3.2.4",
