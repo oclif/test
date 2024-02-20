@@ -1,3 +1,12 @@
+# [3.2.0](https://github.com/oclif/test/compare/3.1.17...3.2.0) (2024-02-20)
+
+
+### Features
+
+* support identifying other root types ([2011cc1](https://github.com/oclif/test/commit/2011cc1de796777bc4c77483183c85d63b6e52a2))
+
+
+
 ## [3.1.17](https://github.com/oclif/test/compare/3.1.16...3.1.17) (2024-02-18)
 
 
