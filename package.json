@@ -15,11 +15,19 @@
     "@types/cli-progress": "^3.11.5",
     "@types/mocha": "^10",
     "@types/node": "^18",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
     "commitlint": "^18.6.1",
     "eslint": "^8.56.0",
     "eslint-config-oclif": "^5.0.0",
     "eslint-config-oclif-typescript": "^3.0.44",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-mocha": "^10.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-perfectionist": "^2.5.0",
+    "eslint-plugin-unicorn": "^51.0.1",
     "globby": "^11.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.2",
@@ -42,6 +50,7 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
+  "packageManager": "yarn@4.1.0",
   "repository": "oclif/test",
   "scripts": {
     "build": "shx rm -rf lib && tsc",
@@ -50,7 +59,7 @@
     "prepare": "husky install",
     "prepublishOnly": "yarn run build",
     "pretest": "yarn build --noEmit && tsc -p test --noEmit",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\""
+    "test": "yarn pretest && mocha --forbid-only \"test/**/*.test.ts\" && yarn posttest"
   },
   "types": "lib/index.d.ts"
 }
