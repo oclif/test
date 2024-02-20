@@ -16,11 +16,12 @@ function traverseFilePathUntil(filename: string, predicate: (filename: string) =
 }
 
 // Update to path.dirname(url.fileURLToPath(import.meta.url)) whenever we update tsconfig target to ES2020
-// eslint-disable-next-line unicorn/prefer-module
+/* eslint-disable unicorn/prefer-module */
 loadConfig.root = traverseFilePathUntil(
   require.main?.path ?? module.path,
   (p) => !(p.includes('node_modules') || p.includes('.yarn') || p.includes('.pnpm')),
 )
+/* eslint-enable unicorn/prefer-module */
 
 export const test = fancy
   .register('loadConfig', loadConfig)
