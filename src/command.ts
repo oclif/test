@@ -21,7 +21,7 @@ export function command(
       args = castArray(args)
       const [id, ...extra] = args
       const cmdId = toStandardizedId(id, ctx.config)
-      ctx.expectation = ctx.expectation || `runs ${args.join(' ')}`
+      ctx.expectation ||= `runs ${args.join(' ')}`
       await ctx.config.runHook('init', {argv: extra, id: cmdId})
       ctx.returned = await ctx.config.runCommand(cmdId, extra)
     },

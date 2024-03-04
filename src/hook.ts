@@ -25,8 +25,8 @@ export default (
 } => ({
   async run(ctx: Context) {
     if (!event) throw new Error('no hook provided')
-    if (!ctx.config) ctx.config = await loadConfig(options).run({} as Context)
-    ctx.expectation = ctx.expectation || `runs ${event} hook`
+    ctx.config ||= await loadConfig(options).run({} as Context)
+    ctx.expectation ||= `runs ${event} hook`
     ctx.returned = await ctx.config.runHook(event, hookOpts || {})
   },
 })
