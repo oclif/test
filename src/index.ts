@@ -1,4 +1,4 @@
-import {fancy} from 'fancy-test'
+import * as fancyTest from 'fancy-test'
 import {dirname} from 'node:path'
 
 import {command} from './command'
@@ -15,7 +15,7 @@ function traverseFilePathUntil(filename: string, predicate: (filename: string) =
   return current
 }
 
-// Update to path.dirname(url.fileURLToPath(import.meta.url)) whenever we update tsconfig target to ES2020
+// Update to path.dirname(url.fileURLToPath(import.meta.url)) whenever we migrate to ESM
 /* eslint-disable unicorn/prefer-module */
 loadConfig.root = traverseFilePathUntil(
   require.main?.path ?? module.path,
@@ -23,7 +23,8 @@ loadConfig.root = traverseFilePathUntil(
 )
 /* eslint-enable unicorn/prefer-module */
 
-export const test = fancy
+// Using a named export to import fancy causes this issue: https://github.com/oclif/test/issues/516
+export const test = fancyTest.fancy
   .register('loadConfig', loadConfig)
   .register('command', command)
   .register('exit', exit)
