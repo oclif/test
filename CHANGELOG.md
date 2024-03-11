@@ -1,3 +1,13 @@
+## [3.2.5](https://github.com/oclif/test/compare/3.2.3...3.2.5) (2024-03-11)
+
+
+### Bug Fixes
+
+* dont use named import ([e2028c0](https://github.com/oclif/test/commit/e2028c04961e34b5a4244623dd7e221030298228))
+* manually bump version ([fd0f560](https://github.com/oclif/test/commit/fd0f56050888c968269a1bb86dc9b3e9b37fb285))
+
+
+
 ## [3.2.3](https://github.com/oclif/test/compare/3.2.2...3.2.3) (2024-03-10)
 
 
