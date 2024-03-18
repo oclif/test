@@ -3,7 +3,6 @@
 test helpers for oclif CLIs
 
 [![Version](https://img.shields.io/npm/v/@oclif/test.svg)](https://npmjs.org/package/@oclif/test)
-[![Known Vulnerabilities](https://snyk.io/test/npm/@oclif/test/badge.svg)](https://snyk.io/test/npm/@oclif/test)
 [![Downloads/week](https://img.shields.io/npm/dw/@oclif/test.svg)](https://npmjs.org/package/@oclif/test)
 [![License](https://img.shields.io/npm/l/@oclif/test.svg)](https://github.com/oclif/test/blob/main/package.json)
 
