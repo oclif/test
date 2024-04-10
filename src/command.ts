@@ -20,7 +20,8 @@ export function command(
       if (!ctx.config || opts.reset) ctx.config = await loadConfig(opts).run({} as Context)
       args = castArray(args)
       const [id, ...extra] = args
-      const cmdId = toStandardizedId(id, ctx.config)
+      let cmdId = toStandardizedId(id, ctx.config)
+      if (cmdId === '.') cmdId = Symbol('SINGLE_COMMAND_CLI').toString()
       ctx.expectation ||= `runs ${args.join(' ')}`
       await ctx.config.runHook('init', {argv: extra, id: cmdId})
       ctx.returned = await ctx.config.runCommand(cmdId, extra)
