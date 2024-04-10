@@ -1,3 +1,12 @@
+## [3.2.9](https://github.com/oclif/test/compare/3.2.8...3.2.9) (2024-04-10)
+
+
+### Bug Fixes
+
+* restore support for single command cli test ([30cf43f](https://github.com/oclif/test/commit/30cf43f8736bfe1254507626ceee579c9d7694d7))
+
+
+
 ## [3.2.8](https://github.com/oclif/test/compare/3.2.7...3.2.8) (2024-03-25)
 
 
