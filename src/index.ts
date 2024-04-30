@@ -15,12 +15,14 @@ function traverseFilePathUntil(filename: string, predicate: (filename: string) =
   return current
 }
 
-// Update to path.dirname(url.fileURLToPath(import.meta.url)) whenever we migrate to ESM
 /* eslint-disable unicorn/prefer-module */
-loadConfig.root = traverseFilePathUntil(
-  require.main?.path ?? module.path,
-  (p) => !(p.includes('node_modules') || p.includes('.pnpm') || p.includes('.yarn')),
-)
+loadConfig.root =
+  process.env.OCLIF_TEST_ROOT ??
+  Object.values(require.cache).find((m) => m?.children.includes(module))?.filename ??
+  traverseFilePathUntil(
+    require.main?.path ?? module.path,
+    (p) => !(p.includes('node_modules') || p.includes('.pnpm') || p.includes('.yarn')),
+  )
 /* eslint-enable unicorn/prefer-module */
 
 // Using a named export to import fancy causes this issue: https://github.com/oclif/test/issues/516
