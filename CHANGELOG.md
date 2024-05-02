@@ -1,3 +1,16 @@
+## [3.2.12](https://github.com/oclif/test/compare/3.2.12-dev.0...3.2.12) (2024-05-02)
+
+
+
+## [3.2.12-dev.0](https://github.com/oclif/test/compare/3.2.11...3.2.12-dev.0) (2024-04-30)
+
+
+### Bug Fixes
+
+* use require.cache to resolve root ([40387ad](https://github.com/oclif/test/commit/40387ad5c01c442c893be73e7246b470e3c2f730))
+
+
+
 ## [3.2.11](https://github.com/oclif/test/compare/3.2.10...3.2.11) (2024-04-21)
 
 
