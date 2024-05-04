@@ -5,7 +5,7 @@
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/test/issues",
   "dependencies": {
-    "@oclif/core": "^3.26.4",
+    "@oclif/core": "^3.26.5",
     "chai": "^4.4.1",
     "fancy-test": "^3.0.14"
   },
