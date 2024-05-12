@@ -1,3 +1,12 @@
+## [3.2.14](https://github.com/oclif/test/compare/3.2.13...3.2.14) (2024-05-12)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 3.26.5 to 3.26.6 ([b0be7fa](https://github.com/oclif/test/commit/b0be7fad0a3290b34e97834e6b510f85f1ce9b9e))
+
+
+
 ## [3.2.13](https://github.com/oclif/test/compare/3.2.12...3.2.13) (2024-05-05)
 
 
