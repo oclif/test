@@ -1,3 +1,12 @@
+## [3.2.15](https://github.com/oclif/test/compare/3.2.14...3.2.15) (2024-05-12)
+
+
+### Bug Fixes
+
+* **deps:** bump fancy-test from 3.0.14 to 3.0.15 ([8b75374](https://github.com/oclif/test/commit/8b75374c165ed4f1fe46ce895b9aa7e58833b311))
+
+
+
 ## [3.2.14](https://github.com/oclif/test/compare/3.2.13...3.2.14) (2024-05-12)
 
 
