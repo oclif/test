@@ -16,6 +16,7 @@ const RECORD_OPTIONS: CaptureOptions = {
 }
 
 const originals = {
+  NODE_ENV: process.env.NODE_ENV,
   stderr: process.stderr.write,
   stdout: process.stdout.write,
 }
@@ -61,6 +62,7 @@ function mockedStderr(
 const restore = (): void => {
   process.stderr.write = originals.stderr
   process.stdout.write = originals.stdout
+  process.env.NODE_ENV = originals.NODE_ENV
 }
 
 const reset = (): void => {
@@ -113,6 +115,7 @@ export async function captureOutput<T>(
   RECORD_OPTIONS.stripAnsi = opts?.stripAnsi ?? true
   process.stderr.write = mockedStderr
   process.stdout.write = mockedStdout
+  process.env.NODE_ENV = 'test'
 
   try {
     const result = await fn()
@@ -150,7 +153,7 @@ export async function runCommand<T>(
   const [id, ...rest] = argsArray
   const finalArgs = id === '.' ? rest : argsArray
 
-  debug('loadOpts: %O', loadOpts)
+  debug('loadOpts: %O', loadOptions)
   debug('args: %O', finalArgs)
 
   return captureOutput<T>(async () => run(finalArgs, loadOptions), captureOpts)
@@ -169,7 +172,7 @@ export async function runHook<T>(
 }> {
   const loadOptions = makeLoadOptions(loadOpts)
 
-  debug('loadOpts: %O', loadOpts)
+  debug('loadOpts: %O', loadOptions)
 
   return captureOutput<T>(async () => {
     const config = await Config.load(loadOptions)
