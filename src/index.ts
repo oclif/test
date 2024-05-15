@@ -10,71 +10,8 @@ type CaptureOptions = {
   stripAnsi?: boolean
 }
 
-const RECORD_OPTIONS: CaptureOptions = {
-  print: false,
-  stripAnsi: true,
-}
-
-const originals = {
-  NODE_ENV: process.env.NODE_ENV,
-  stderr: process.stderr.write,
-  stdout: process.stdout.write,
-}
-
-const output: Record<'stderr' | 'stdout', Array<Uint8Array | string>> = {
-  stderr: [],
-  stdout: [],
-}
-
-function mockedStdout(str: Uint8Array | string, cb?: (err?: Error) => void): boolean
-function mockedStdout(str: Uint8Array | string, encoding?: BufferEncoding, cb?: (err?: Error) => void): boolean
-function mockedStdout(
-  str: Uint8Array | string,
-  encoding?: ((err?: Error) => void) | BufferEncoding,
-  cb?: (err?: Error) => void,
-): boolean {
-  output.stdout.push(str)
-  if (!RECORD_OPTIONS.print) return true
-
-  if (typeof encoding === 'string') {
-    return originals.stdout.bind(process.stdout)(str, encoding, cb)
-  }
-
-  return originals.stdout.bind(process.stdout)(str, cb)
-}
-
-function mockedStderr(str: Uint8Array | string, cb?: (err?: Error) => void): boolean
-function mockedStderr(str: Uint8Array | string, encoding?: BufferEncoding, cb?: (err?: Error) => void): boolean
-function mockedStderr(
-  str: Uint8Array | string,
-  encoding?: ((err?: Error) => void) | BufferEncoding,
-  cb?: (err?: Error) => void,
-): boolean {
-  output.stderr.push(str)
-  if (!RECORD_OPTIONS.print) return true
-  if (typeof encoding === 'string') {
-    return originals.stdout.bind(process.stderr)(str, encoding, cb)
-  }
-
-  return originals.stdout.bind(process.stderr)(str, cb)
-}
-
-const restore = (): void => {
-  process.stderr.write = originals.stderr
-  process.stdout.write = originals.stdout
-  process.env.NODE_ENV = originals.NODE_ENV
-}
-
-const reset = (): void => {
-  output.stderr = []
-  output.stdout = []
-}
-
-const toString = (str: Uint8Array | string): string =>
-  RECORD_OPTIONS.stripAnsi ? ansis.strip(str.toString()) : str.toString()
-
-const getStderr = (): string => output.stderr.map((b) => toString(b)).join('')
-const getStdout = (): string => output.stdout.map((b) => toString(b)).join('')
+type MockedStdout = typeof process.stdout.write
+type MockedStderr = typeof process.stderr.write
 
 function traverseFilePathUntil(filename: string, predicate: (filename: string) => boolean): string {
   let current = filename
@@ -111,10 +48,43 @@ export async function captureOutput<T>(
   stderr: string
   stdout: string
 }> {
-  RECORD_OPTIONS.print = opts?.print ?? false
-  RECORD_OPTIONS.stripAnsi = opts?.stripAnsi ?? true
-  process.stderr.write = mockedStderr
-  process.stdout.write = mockedStdout
+  const print = opts?.print ?? false
+  const stripAnsi = opts?.stripAnsi ?? true
+
+  const originals = {
+    NODE_ENV: process.env.NODE_ENV,
+    stderr: process.stderr.write,
+    stdout: process.stdout.write,
+  }
+
+  const output: Record<'stderr' | 'stdout', Array<Uint8Array | string>> = {
+    stderr: [],
+    stdout: [],
+  }
+
+  const toString = (str: Uint8Array | string): string => (stripAnsi ? ansis.strip(str.toString()) : str.toString())
+  const getStderr = (): string => output.stderr.map((b) => toString(b)).join('')
+  const getStdout = (): string => output.stdout.map((b) => toString(b)).join('')
+
+  const mock =
+    (std: 'stderr' | 'stdout'): MockedStderr | MockedStdout =>
+    (str: Uint8Array | string, encoding?: ((err?: Error) => void) | BufferEncoding, cb?: (err?: Error) => void) => {
+      output[std].push(str)
+
+      if (print) {
+        if (encoding !== null && typeof encoding === 'function') {
+          cb = encoding
+          encoding = undefined
+        }
+
+        originals[std].apply(process[std], [str, encoding, cb])
+      } else if (typeof cb === 'function') cb()
+
+      return true
+    }
+
+  process.stdout.write = mock('stdout')
+  process.stderr.write = mock('stderr')
   process.env.NODE_ENV = 'test'
 
   try {
@@ -126,14 +96,15 @@ export async function captureOutput<T>(
     }
   } catch (error) {
     return {
-      ...(error instanceof Errors.CLIError && {error}),
-      ...(error instanceof Error && {error}),
+      ...(error instanceof Errors.CLIError && {error: {...error, message: toString(error.message)}}),
+      ...(error instanceof Error && {error: {...error, message: toString(error.message)}}),
       stderr: getStderr(),
       stdout: getStdout(),
     }
   } finally {
-    restore()
-    reset()
+    process.stderr.write = originals.stderr
+    process.stdout.write = originals.stdout
+    process.env.NODE_ENV = originals.NODE_ENV
   }
 }
 
