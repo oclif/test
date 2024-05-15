@@ -1,48 +1,50 @@
-import {expect, test} from '../src'
+import {Command, Flags} from '@oclif/core'
+import {expect} from 'chai'
 
-describe('stdout', () => {
-  test
-  .stdout()
-  .end('logs', output => {
-    console.log('foo')
-    expect(output.stdout).to.equal('foo\n')
-  })
+import {captureOutput} from '../src'
 
-  test
-  .stdout()
-  .end('logs twice', output => {
-    console.log('foo')
-    expect(output.stdout).to.equal('foo\n')
-    console.log('bar')
-    expect(output.stdout).to.equal('foo\nbar\n')
-  })
-})
+class MyCommand extends Command {
+  static flags = {
+    channel: Flags.option({
+      char: 'c',
+      multiple: true,
+      options: ['stdout', 'stderr'] as const,
+      required: true,
+    })(),
+  }
 
-describe('stdout + stderr', () => {
-  test
-  .stdout()
-  .stderr()
-  .end('logs and errors', output => {
-    console.log('foo')
-    console.error('bar')
-    expect(output.stdout).to.equal('foo\n')
-    expect(output.stderr).to.equal('bar\n')
-  })
-})
+  async run() {
+    const {flags} = await this.parse(MyCommand)
+    if (flags.channel.includes('stdout')) {
+      this.log('hello world!')
+    }
 
-// eslint-disable-next-line unicorn/no-static-only-class
-class MockOs {
-  static platform() {
-    return 'not-a-platform'
+    if (flags.channel.includes('stderr')) {
+      this.logToStderr('hello world!')
+    }
   }
 }
 
-for (const os of ['darwin', 'win32', 'linux']) {
-  describe(os, () => {
-    test
-    .stub(MockOs, 'platform', stub => stub.returns(os))
-    .end('sets os', () => {
-      expect(MockOs.platform()).to.equal(os)
+describe('captureOutput', () => {
+  it('should capture stdout', async () => {
+    const {stdout} = await captureOutput(async () => {
+      await MyCommand.run(['-c=stdout'])
     })
+    expect(stdout).to.equal('hello world!\n')
   })
-}
+
+  it('should capture stderr', async () => {
+    const {stderr} = await captureOutput(async () => {
+      await MyCommand.run(['-c=stderr'])
+    })
+    expect(stderr).to.equal('hello world!\n')
+  })
+
+  it('should capture both', async () => {
+    const {stderr, stdout} = await captureOutput(async () => {
+      await MyCommand.run(['-c=stdout', '-c=stderr'])
+    })
+    expect(stdout).to.equal('hello world!\n')
+    expect(stderr).to.equal('hello world!\n')
+  })
+})

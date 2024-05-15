@@ -1,15 +1,14 @@
+import {expect} from 'chai'
 import {join} from 'node:path'
 
-import {expect, test} from '../src'
+import {runHook} from '../src'
 
 // eslint-disable-next-line unicorn/prefer-module
 const root = join(__dirname, 'fixtures/multi')
 
 describe('hooks', () => {
-  test
-  .loadConfig({root})
-  .stdout()
-  .hook('foo', {argv: ['arg']}, {root})
-  .do(output => expect(output.stdout).to.equal('foo hook args: arg\n'))
-  .it()
+  it('should run a hook', async () => {
+    const {stdout} = await runHook('foo', {argv: ['arg']}, {root})
+    expect(stdout).to.equal('foo hook args: arg\n')
+  })
 })

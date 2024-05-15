@@ -3,7 +3,7 @@ import ansis from 'ansis'
 import makeDebug from 'debug'
 import {dirname} from 'node:path'
 
-const debug = makeDebug('test')
+const debug = makeDebug('oclif-test')
 
 type CaptureOptions = {
   print?: boolean
@@ -83,16 +83,21 @@ function traverseFilePathUntil(filename: string, predicate: (filename: string) =
   return current
 }
 
-function makeLoadOptions(loadOpts?: Interfaces.LoadOptions): Interfaces.LoadOptions {
+function findRoot(): string {
   return (
-    loadOpts ?? {
-      root: traverseFilePathUntil(
-        // eslint-disable-next-line unicorn/prefer-module
-        require.main?.path ?? module.path,
-        (p) => !(p.includes('node_modules') || p.includes('.pnpm') || p.includes('.yarn')),
-      ),
-    }
+    process.env.OCLIF_TEST_ROOT ??
+    // eslint-disable-next-line unicorn/prefer-module
+    Object.values(require.cache).find((m) => m?.children.includes(module))?.filename ??
+    traverseFilePathUntil(
+      // eslint-disable-next-line unicorn/prefer-module
+      require.main?.path ?? module.path,
+      (p) => !(p.includes('node_modules') || p.includes('.pnpm') || p.includes('.yarn')),
+    )
   )
+}
+
+function makeLoadOptions(loadOpts?: Interfaces.LoadOptions): Interfaces.LoadOptions {
+  return loadOpts ?? {root: findRoot()}
 }
 
 export async function captureOutput<T>(
@@ -130,7 +135,7 @@ export async function captureOutput<T>(
 }
 
 export async function runCommand<T>(
-  args: string[],
+  args: string | string[],
   loadOpts?: Interfaces.LoadOptions,
   captureOpts?: CaptureOptions,
 ): Promise<{
@@ -140,8 +145,15 @@ export async function runCommand<T>(
   stdout: string
 }> {
   const loadOptions = makeLoadOptions(loadOpts)
+  const argsArray = (Array.isArray(args) ? args : [args]).join(' ').split(' ')
+
+  const [id, ...rest] = argsArray
+  const finalArgs = id === '.' ? rest : argsArray
+
   debug('loadOpts: %O', loadOpts)
-  return captureOutput<T>(async () => run(args, loadOptions), captureOpts)
+  debug('args: %O', finalArgs)
+
+  return captureOutput<T>(async () => run(finalArgs, loadOptions), captureOpts)
 }
 
 export async function runHook<T>(
