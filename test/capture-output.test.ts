@@ -1,9 +1,8 @@
 import {Command, Errors, Flags} from '@oclif/core'
+import {bold} from 'ansis'
 import {expect} from 'chai'
 
 import {captureOutput} from '../src'
-
-const bold = (s: string) => `\u001B[1m${s}\u001B[22m`
 
 class MyCommand extends Command {
   static flags = {

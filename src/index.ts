@@ -1,4 +1,5 @@
 import {Config, Errors, Interfaces, run} from '@oclif/core'
+import ansis from 'ansis'
 import makeDebug from 'debug'
 import {dirname} from 'node:path'
 
@@ -59,6 +60,7 @@ function makeLoadOptions(loadOpts?: Interfaces.LoadOptions): Interfaces.LoadOpti
  */
 export async function captureOutput<T>(fn: () => Promise<unknown>, opts?: CaptureOptions): Promise<CaptureResult<T>> {
   const print = opts?.print ?? false
+  const stripAnsi = opts?.stripAnsi ?? true
 
   const originals = {
     NODE_ENV: process.env.NODE_ENV,
@@ -71,8 +73,7 @@ export async function captureOutput<T>(fn: () => Promise<unknown>, opts?: Captur
     stdout: [],
   }
 
-  const {default: stripAnsi} = opts?.stripAnsi ?? true ? await import('strip-ansi') : {default: (str: string) => str}
-  const toString = (str: Uint8Array | string): string => stripAnsi(str.toString())
+  const toString = (str: Uint8Array | string): string => (stripAnsi ? ansis.strip(str.toString()) : str.toString())
   const getStderr = (): string => output.stderr.map((b) => toString(b)).join('')
   const getStdout = (): string => output.stdout.map((b) => toString(b)).join('')
 

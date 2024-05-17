@@ -5,8 +5,8 @@
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/test/issues",
   "dependencies": {
-    "debug": "^4.3.4",
-    "strip-ansi": "^7.1.0"
+    "ansis": "^3.2.0",
+    "debug": "^4.3.4"
   },
   "peerDependencies": {
     "@oclif/core": ">= 3.0.0"
