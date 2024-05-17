@@ -18,6 +18,11 @@ See the [V4 Migration Guide](./MIGRATION.md) if you are migrating from v3 or old
 
 `captureOutput` allows you to get the stdout, stderr, return value, and error of the callback you provide it. This makes it possible to assert that certain strings were printed to stdout and stderr or that the callback failed with the expected error or succeeded with the expected result.
 
+**Options**
+
+- `print` - Print everything that goes to stdout and stderr.
+- `stripAnsi` - Strip ansi codes from everything that goes to stdout and stderr. Defaults to true.
+
 See the [tests](./test/capture-output.test.ts) for example usage.
 
 ### `runCommand`

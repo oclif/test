@@ -1,3 +1,4 @@
+import {Config} from '@oclif/core'
 import {expect} from 'chai'
 import {join} from 'node:path'
 
@@ -36,6 +37,18 @@ describe('runCommand', () => {
     expect(stdout).to.equal('exiting with code 101\n')
     expect(error?.message).to.equal('EEXIT: 101')
     expect(error?.oclif?.exit).to.equal(101)
+  })
+
+  it('should take existing Config instance', async () => {
+    const config = await Config.load(root)
+    const {result, stdout} = await runCommand<{name: string}>(['foo:bar'], config)
+    expect(stdout).to.equal('hello world!\n')
+    expect(result?.name).to.equal('world')
+  })
+
+  it('should find root dynamically if not provided', async () => {
+    const {stdout} = await runCommand(['--help'])
+    expect(stdout).to.include('$ @oclif/test [COMMAND]')
   })
 })
 

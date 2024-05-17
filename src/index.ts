@@ -1,5 +1,4 @@
 import {Config, Errors, Interfaces, run} from '@oclif/core'
-import ansis from 'ansis'
 import makeDebug from 'debug'
 import {dirname} from 'node:path'
 
@@ -8,6 +7,13 @@ const debug = makeDebug('oclif-test')
 type CaptureOptions = {
   print?: boolean
   stripAnsi?: boolean
+}
+
+type CaptureResult<T> = {
+  error?: Error & Partial<Errors.CLIError>
+  result?: T
+  stderr: string
+  stdout: string
 }
 
 type MockedStdout = typeof process.stdout.write
@@ -39,17 +45,20 @@ function makeLoadOptions(loadOpts?: Interfaces.LoadOptions): Interfaces.LoadOpti
   return loadOpts ?? {root: findRoot()}
 }
 
-export async function captureOutput<T>(
-  fn: () => Promise<unknown>,
-  opts?: CaptureOptions,
-): Promise<{
-  error?: Error & Partial<Errors.CLIError>
-  result?: T
-  stderr: string
-  stdout: string
-}> {
+/**
+ * Capture the stderr and stdout output of a function
+ * @param fn async function to run
+ * @param opts options
+ *  - print: Whether to print the output to the console
+ *  - stripAnsi: Whether to strip ANSI codes from the output
+ * @returns {Promise<CaptureResult<T>>} Captured output
+ *   - error: Error object if the function throws an error
+ *   - result: Result of the function if it returns a value and succeeds
+ *   - stderr: Captured stderr output
+ *   - stdout: Captured stdout output
+ */
+export async function captureOutput<T>(fn: () => Promise<unknown>, opts?: CaptureOptions): Promise<CaptureResult<T>> {
   const print = opts?.print ?? false
-  const stripAnsi = opts?.stripAnsi ?? true
 
   const originals = {
     NODE_ENV: process.env.NODE_ENV,
@@ -62,7 +71,8 @@ export async function captureOutput<T>(
     stdout: [],
   }
 
-  const toString = (str: Uint8Array | string): string => (stripAnsi ? ansis.strip(str.toString()) : str.toString())
+  const {default: stripAnsi} = opts?.stripAnsi ?? true ? await import('strip-ansi') : {default: (str: string) => str}
+  const toString = (str: Uint8Array | string): string => stripAnsi(str.toString())
   const getStderr = (): string => output.stderr.map((b) => toString(b)).join('')
   const getStdout = (): string => output.stdout.map((b) => toString(b)).join('')
 
@@ -108,16 +118,24 @@ export async function captureOutput<T>(
   }
 }
 
+/**
+ * Capture the stderr and stdout output of a command in your CLI
+ * @param args Command arguments, e.g. `['my:command', '--flag']` or `'my:command --flag'`
+ * @param loadOpts options for loading oclif `Config`
+ * @param captureOpts options for capturing the output
+ *  - print: Whether to print the output to the console
+ *  - stripAnsi: Whether to strip ANSI codes from the output
+ * @returns {Promise<CaptureResult<T>>} Captured output
+ *   - error: Error object if the command throws an error
+ *   - result: Result of the command if it returns a value and succeeds
+ *   - stderr: Captured stderr output
+ *   - stdout: Captured stdout output
+ */
 export async function runCommand<T>(
   args: string | string[],
   loadOpts?: Interfaces.LoadOptions,
   captureOpts?: CaptureOptions,
-): Promise<{
-  error?: Error & Partial<Errors.CLIError>
-  result?: T
-  stderr: string
-  stdout: string
-}> {
+): Promise<CaptureResult<T>> {
   const loadOptions = makeLoadOptions(loadOpts)
   const argsArray = (Array.isArray(args) ? args : [args]).join(' ').split(' ')
 
@@ -130,17 +148,26 @@ export async function runCommand<T>(
   return captureOutput<T>(async () => run(finalArgs, loadOptions), captureOpts)
 }
 
+/**
+ * Capture the stderr and stdout output of a hook in your CLI
+ * @param hook Hook name
+ * @param options options to pass to the hook
+ * @param loadOpts options for loading oclif `Config`
+ * @param captureOpts options for capturing the output
+ *  - print: Whether to print the output to the console
+ *  - stripAnsi: Whether to strip ANSI codes from the output
+ * @returns {Promise<CaptureResult<T>>} Captured output
+ *   - error: Error object if the hook throws an error
+ *   - result: Result of the hook if it returns a value and succeeds
+ *   - stderr: Captured stderr output
+ *   - stdout: Captured stdout output
+ */
 export async function runHook<T>(
   hook: string,
   options: Record<string, unknown>,
   loadOpts?: Interfaces.LoadOptions,
-  recordOpts?: CaptureOptions,
-): Promise<{
-  error?: Error & Partial<Errors.CLIError>
-  result?: T
-  stderr: string
-  stdout: string
-}> {
+  captureOpts?: CaptureOptions,
+): Promise<CaptureResult<T>> {
   const loadOptions = makeLoadOptions(loadOpts)
 
   debug('loadOpts: %O', loadOptions)
@@ -148,5 +175,5 @@ export async function runHook<T>(
   return captureOutput<T>(async () => {
     const config = await Config.load(loadOptions)
     return config.runHook(hook, options)
-  }, recordOpts)
+  }, captureOpts)
 }

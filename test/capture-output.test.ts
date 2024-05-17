@@ -3,6 +3,8 @@ import {expect} from 'chai'
 
 import {captureOutput} from '../src'
 
+const bold = (s: string) => `\u001B[1m${s}\u001B[22m`
+
 class MyCommand extends Command {
   static flags = {
     channel: Flags.option({
@@ -20,11 +22,11 @@ class MyCommand extends Command {
     if (flags.throw) throw new Errors.CLIError('error', {exit: flags.throw})
 
     if (flags.channel.includes('stdout')) {
-      this.log('hello world!')
+      this.log(bold('hello world!'))
     }
 
     if (flags.channel.includes('stderr')) {
-      this.logToStderr('hello world!')
+      this.logToStderr(bold('hello world!'))
     }
 
     return {success: true}
@@ -65,5 +67,15 @@ describe('captureOutput', () => {
   it('should capture error', async () => {
     const {error} = await captureOutput(async () => MyCommand.run(['-c=stdout', '--throw=101']))
     expect(error?.oclif?.exit).to.equal(101)
+  })
+
+  it('should strip ansi codes by default', async () => {
+    const {stdout} = await captureOutput(async () => MyCommand.run(['-c=stdout']))
+    expect(stdout).to.equal('hello world!\n')
+  })
+
+  it('should not strip ansi codes if stripAnsi is false', async () => {
+    const {stdout} = await captureOutput(async () => MyCommand.run(['-c=stdout']), {stripAnsi: false})
+    expect(stdout).to.equal('\u001B[1mhello world!\u001B[22m\n')
   })
 })
