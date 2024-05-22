@@ -1,3 +1,12 @@
+## [4.0.2](https://github.com/oclif/test/compare/4.0.1...4.0.2) (2024-05-22)
+
+
+### Bug Fixes
+
+* preserve quotes in inputs to runCommand ([2fad42a](https://github.com/oclif/test/commit/2fad42a929247a9885e98d67c36fe6d30e36e53b))
+
+
+
 ## [4.0.1](https://github.com/oclif/test/compare/3.2.15...4.0.1) (2024-05-21)
 
 
