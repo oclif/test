@@ -47,6 +47,22 @@ function makeLoadOptions(loadOpts?: Interfaces.LoadOptions): Interfaces.LoadOpti
 }
 
 /**
+ * Split a string into an array of strings, preserving quoted substrings
+ *
+ * @example
+ * splitString('foo bar --name "foo"') // ['foo bar', '--name', 'foo']
+ * splitString('foo bar --name "foo bar"') // ['foo bar', '--name', 'foo bar']
+ * splitString('foo bar --name="foo bar"') // ['foo bar', '--name=foo bar']
+ * splitString('foo bar --name=foo bar') // ['foo bar', '--name=foo', 'bar']
+ *
+ * @param str input string
+ * @returns array of strings with quotes removed
+ */
+function splitString(str: string): string[] {
+  return (str.match(/(?:[^\s"]+|"[^"]*")+/g) ?? []).map((s) => s.replaceAll(/^"|"$|(?<==)"/g, ''))
+}
+
+/**
  * Capture the stderr and stdout output of a function
  * @param fn async function to run
  * @param opts options
@@ -138,7 +154,7 @@ export async function runCommand<T>(
   captureOpts?: CaptureOptions,
 ): Promise<CaptureResult<T>> {
   const loadOptions = makeLoadOptions(loadOpts)
-  const argsArray = (Array.isArray(args) ? args : [args]).join(' ').split(' ')
+  const argsArray = splitString((Array.isArray(args) ? args : [args]).join(' '))
 
   const [id, ...rest] = argsArray
   const finalArgs = id === '.' ? rest : argsArray
