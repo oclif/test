@@ -6,7 +6,7 @@
   "bugs": "https://github.com/oclif/test/issues",
   "dependencies": {
     "ansis": "^3.2.0",
-    "debug": "^4.3.4"
+    "debug": "^4.3.5"
   },
   "peerDependencies": {
     "@oclif/core": ">= 3.0.0"
