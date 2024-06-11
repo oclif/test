@@ -297,6 +297,44 @@ describe('env tests', () => {
 
 `.stdin()` allowed you mock stdin. There is no direct replacement for this in version 4. You can use [mock-stdin](https://www.npmjs.com/package/mock-stdin) directly if you need this functionality.
 
+**Before**
+
+```javascript
+describe('stdin test', () => {
+  fancy
+    .stdin('whoa there!\n')
+    .stdout()
+    .it('mocks', () => {
+      process.stdin.setEncoding('utf8')
+      process.stdin.once('data', (data) => {
+        // data === 'whoa there!\n'
+      })
+    })
+})
+```
+
+**After**
+
+```typescript
+import {captureOutput} from '@oclif/test'
+import {expect} from 'chai'
+import {stdin as fstdin} from 'mock-stdin'
+
+import {MyCommand} from '../../src/commands/my/command.js'
+
+const stdin = fstdin()
+
+describe('stdin test', () => {
+  it('mocks', async () => {
+    const {result} = await captureOutput(async () => {
+      setTimeout(() => stdin.send('whoa there!\n'), 10)
+      return MyCommand.run()
+    })
+    expect(result).to.equal('whoa there!')
+  })
+})
+```
+
 ## `.retries()`
 
 `.retries()` allowed you to retry the test. There is no direct replacement for this but most testing frameworks have functionality for this builtin.
