@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^18.6.3",
-    "@oclif/core": "^4.0.8",
+    "@oclif/core": "^4.0.12",
     "@oclif/prettier-config": "^0.2.1",
     "@types/chai": "^4.3.16",
     "@types/debug": "^4.1.12",
