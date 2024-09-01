@@ -406,10 +406,10 @@
   resolved "https://registry.yarnpkg.com/@oclif/prettier-config/-/prettier-config-0.2.1.tgz#1def9f38134f9bfb229257f48a35f7d0d183dc78"
   integrity sha512-XB8kwQj8zynXjIIWRm+6gO/r8Qft2xKtwBMSmq1JRqtA6TpwpqECqiu8LosBCyg2JBXuUy2lU23/L98KIR7FrQ==
 
-"@types/chai@^4.3.17":
-  version "4.3.17"
-  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.3.17.tgz#9195f9d242f2ac3b429908864b6b871a8f73f489"
-  integrity sha512-zmZ21EWzR71B4Sscphjief5djsLre50M6lI622OSySTmn9DB3j+C3kWroHfBQWXbOBwbgg/M8CG/hUxDLIloow==
+"@types/chai@^4.3.19":
+  version "4.3.19"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.3.19.tgz#14519f437361d41e84102ed3fbc922ddace3e228"
+  integrity sha512-2hHHvQBVE2FiSK4eN0Br6snX9MtolHaTo/batnLjlGRhoQzlCL61iVpxoqO7SfFyOw+P/pwv+0zNHzKoGWz9Cw==
 
 "@types/debug@^4.1.12":
   version "4.1.12"
