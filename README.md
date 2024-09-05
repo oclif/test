@@ -14,6 +14,8 @@ See the [V4 Migration Guide](./MIGRATION.md) if you are migrating from v3 or old
 
 `@oclif/test` provides a handful of utilities that make it easy to test your [oclif](https://oclif.io) CLI.
 
+**NOTE for jest users** - in order for these utilities to capture all output to the terminal, you must set `verbose: true` in your jest config to prevent jest from supressing any output. See https://jestjs.io/docs/configuration#verbose-boolean for more
+
 ### `captureOutput`
 
 `captureOutput` allows you to get the stdout, stderr, return value, and error of the callback you provide it. This makes it possible to assert that certain strings were printed to stdout and stderr or that the callback failed with the expected error or succeeded with the expected result.
