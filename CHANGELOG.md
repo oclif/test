@@ -1,3 +1,12 @@
+## [4.0.10](https://github.com/oclif/test/compare/4.0.9...4.0.10) (2024-10-16)
+
+
+### Bug Fixes
+
+* optional chaining to prevent type error ([cdf8f44](https://github.com/oclif/test/commit/cdf8f4400038a18cf28a525ab283ea07bca03de3))
+
+
+
 ## [4.0.9](https://github.com/oclif/test/compare/4.0.8...4.0.9) (2024-08-25)
 
 
