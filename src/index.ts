@@ -33,7 +33,7 @@ function findRoot(): string {
   return (
     process.env.OCLIF_TEST_ROOT ??
     // eslint-disable-next-line unicorn/prefer-module
-    Object.values(require.cache).find((m) => m?.children.includes(module))?.filename ??
+    Object.values(require.cache).find((m) => m?.children?.includes(module))?.filename ??
     traverseFilePathUntil(
       // eslint-disable-next-line unicorn/prefer-module
       require.main?.path ?? module.path,
