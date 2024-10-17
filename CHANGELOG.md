@@ -1,3 +1,12 @@
+# [4.1.0](https://github.com/oclif/test/compare/4.0.10...4.1.0) (2024-10-17)
+
+
+### Features
+
+* add ability to override `NODE_ENV` ([02a5708](https://github.com/oclif/test/commit/02a5708fe62a3f4aa3f5cc2124a78bfe48e56bcb))
+
+
+
 ## [4.0.10](https://github.com/oclif/test/compare/4.0.9...4.0.10) (2024-10-16)
 
 
