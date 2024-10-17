@@ -24,6 +24,7 @@ See the [V4 Migration Guide](./MIGRATION.md) if you are migrating from v3 or old
 
 - `print` - Print everything that goes to stdout and stderr.
 - `stripAnsi` - Strip ansi codes from everything that goes to stdout and stderr. Defaults to true.
+- `testNodeEnv` - Sets the `NODE_ENV` value when capturing output. Defaults to `'test'`.
 
 See the [tests](./test/capture-output.test.ts) for example usage.
 

@@ -8,6 +8,7 @@ const debug = makeDebug('oclif-test')
 type CaptureOptions = {
   print?: boolean
   stripAnsi?: boolean
+  testNodeEnv?: string
 }
 
 type CaptureResult<T> = {
@@ -77,6 +78,7 @@ function splitString(str: string): string[] {
 export async function captureOutput<T>(fn: () => Promise<unknown>, opts?: CaptureOptions): Promise<CaptureResult<T>> {
   const print = opts?.print ?? false
   const stripAnsi = opts?.stripAnsi ?? true
+  const testNodeEnv = opts?.testNodeEnv || 'test'
 
   const originals = {
     NODE_ENV: process.env.NODE_ENV,
@@ -112,7 +114,7 @@ export async function captureOutput<T>(fn: () => Promise<unknown>, opts?: Captur
 
   process.stdout.write = mock('stdout')
   process.stderr.write = mock('stderr')
-  process.env.NODE_ENV = 'test'
+  process.env.NODE_ENV = testNodeEnv
 
   try {
     const result = await fn()
