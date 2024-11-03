@@ -15,7 +15,7 @@
     "@commitlint/config-conventional": "^18.6.3",
     "@oclif/core": "^4.0.31",
     "@oclif/prettier-config": "^0.2.1",
-    "@types/chai": "^5.0.0",
+    "@types/chai": "^5.0.1",
     "@types/debug": "^4.1.12",
     "@types/mocha": "^10",
     "@types/node": "^18",
