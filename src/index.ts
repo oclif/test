@@ -125,8 +125,8 @@ export async function captureOutput<T>(fn: () => Promise<unknown>, opts?: Captur
     }
   } catch (error) {
     return {
-      ...(error instanceof Errors.CLIError && {error: {...error, message: toString(error.message)}}),
-      ...(error instanceof Error && {error}),
+      ...(error instanceof Errors.CLIError && {error: Object.assign(error, {message: toString(error.message)})}),
+      ...(error instanceof Error && {error: Object.assign(error, {message: toString(error.message)})}),
       stderr: getStderr(),
       stdout: getStdout(),
     }
