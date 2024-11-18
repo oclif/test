@@ -1,3 +1,12 @@
+## [4.1.2](https://github.com/oclif/test/compare/4.1.1...4.1.2) (2024-11-18)
+
+
+### Bug Fixes
+
+* don't destructure error object ([2190a61](https://github.com/oclif/test/commit/2190a6130a7e2188df5ef7e9f86ca92179241420))
+
+
+
 ## [4.1.1](https://github.com/oclif/test/compare/4.1.0...4.1.1) (2024-11-17)
 
 
