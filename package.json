@@ -5,7 +5,7 @@
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/test/issues",
   "dependencies": {
-    "ansis": "^3.3.2",
+    "ansis": "^3.4.0",
     "debug": "^4.4.0"
   },
   "peerDependencies": {
