@@ -1,3 +1,12 @@
+## [4.1.7](https://github.com/oclif/test/compare/4.1.6...4.1.7) (2025-01-12)
+
+
+### Bug Fixes
+
+* **deps:** bump ansis from 3.6.0 to 3.8.1 ([92bfe18](https://github.com/oclif/test/commit/92bfe18a489dd1722b03fc9eb8e0019b1c2c55e6))
+
+
+
 ## [4.1.6](https://github.com/oclif/test/compare/4.1.5...4.1.6) (2025-01-05)
 
 
