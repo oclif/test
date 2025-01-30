@@ -86,18 +86,18 @@ export async function captureOutput<T>(fn: () => Promise<unknown>, opts?: Captur
     stdout: process.stdout.write,
   }
 
-  const output: Record<'stderr' | 'stdout', Array<Uint8Array | string>> = {
+  const output: Record<'stderr' | 'stdout', Array<string | Uint8Array>> = {
     stderr: [],
     stdout: [],
   }
 
-  const toString = (str: Uint8Array | string): string => (stripAnsi ? ansis.strip(str.toString()) : str.toString())
+  const toString = (str: string | Uint8Array): string => (stripAnsi ? ansis.strip(str.toString()) : str.toString())
   const getStderr = (): string => output.stderr.map((b) => toString(b)).join('')
   const getStdout = (): string => output.stdout.map((b) => toString(b)).join('')
 
   const mock =
     (std: 'stderr' | 'stdout'): MockedStderr | MockedStdout =>
-    (str: Uint8Array | string, encoding?: ((err?: Error) => void) | BufferEncoding, cb?: (err?: Error) => void) => {
+    (str: string | Uint8Array, encoding?: ((err?: Error) => void) | BufferEncoding, cb?: (err?: Error) => void) => {
       output[std].push(str)
 
       if (print) {
