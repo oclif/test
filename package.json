@@ -24,7 +24,7 @@
     "commitlint": "^18.6.1",
     "eslint": "^9.31.0",
     "eslint-config-oclif": "^6.0.85",
-    "eslint-config-prettier": "^10.1.5",
+    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
     "mocha": "^10",
