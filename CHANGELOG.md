@@ -1,3 +1,12 @@
+## [4.1.14](https://github.com/oclif/test/compare/4.1.13...4.1.14) (2025-09-14)
+
+
+### Bug Fixes
+
+* **deps:** bump debug from 4.4.1 to 4.4.3 ([5d1ed0d](https://github.com/oclif/test/commit/5d1ed0d610f854fe1e664063a344ebd12f372454))
+
+
+
 ## [4.1.13](https://github.com/oclif/test/compare/4.1.12...4.1.13) (2025-05-18)
 
 
