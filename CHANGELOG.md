@@ -1,3 +1,12 @@
+## [4.1.15](https://github.com/oclif/test/compare/4.1.14...4.1.15) (2025-11-15)
+
+
+### Bug Fixes
+
+* **deps:** bump js-yaml from 4.1.0 to 4.1.1 ([f6eb102](https://github.com/oclif/test/commit/f6eb102140e9d1aeaf45264bcbafaec6fe2ad144))
+
+
+
 ## [4.1.14](https://github.com/oclif/test/compare/4.1.13...4.1.14) (2025-09-14)
 
 
