@@ -17,7 +17,7 @@
     "@oclif/core": "^4.10.2",
     "@oclif/prettier-config": "^0.2.1",
     "@types/chai": "^5.2.2",
-    "@types/debug": "^4.1.12",
+    "@types/debug": "^4.1.13",
     "@types/mocha": "^10",
     "@types/node": "^18",
     "chai": "^5.3.3",
