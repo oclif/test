@@ -1,3 +1,12 @@
+## [4.1.19](https://github.com/oclif/test/compare/4.1.18...4.1.19) (2026-06-13)
+
+
+### Bug Fixes
+
+* **deps:** bump esbuild from 0.28.0 to 0.28.1 ([429ee9b](https://github.com/oclif/test/commit/429ee9b09cbed7c66b72eef889f0c2ee36e85689))
+
+
+
 ## [4.1.18](https://github.com/oclif/test/compare/4.1.17...4.1.18) (2026-04-05)
 
 
