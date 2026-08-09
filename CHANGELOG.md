@@ -1,3 +1,12 @@
+## [4.1.22](https://github.com/oclif/test/compare/4.1.21...4.1.22) (2026-08-09)
+
+
+### Bug Fixes
+
+* **deps:** bump js-yaml from 4.3.0 to 4.3.1 ([34b2397](https://github.com/oclif/test/commit/34b239704663df6cc5ba7c112842edb59fa8db08))
+
+
+
 ## [4.1.21](https://github.com/oclif/test/compare/4.1.20...4.1.21) (2026-07-26)
 
 
