@@ -1,4 +1,4 @@
-import {Config, Errors, Interfaces, run} from '@oclif/core'
+import {Config, Errors, type Interfaces, run} from '@oclif/core'
 import ansis from 'ansis'
 import makeDebug from 'debug'
 import {dirname} from 'node:path'
@@ -76,8 +76,8 @@ function splitString(str: string): string[] {
  *   - stdout: Captured stdout output
  */
 export async function captureOutput<T>(fn: () => Promise<unknown>, opts?: CaptureOptions): Promise<CaptureResult<T>> {
-  const print = opts?.print ?? false
-  const stripAnsi = opts?.stripAnsi ?? true
+  const isPrint = opts?.print ?? false
+  const isStripAnsi = opts?.stripAnsi ?? true
   const testNodeEnv = opts?.testNodeEnv || 'test'
 
   const originals = {
@@ -91,26 +91,27 @@ export async function captureOutput<T>(fn: () => Promise<unknown>, opts?: Captur
     stdout: [],
   }
 
-  const toString = (str: string | Uint8Array): string => (stripAnsi ? ansis.strip(str.toString()) : str.toString())
+  const toString = (str: string | Uint8Array): string => (isStripAnsi ? ansis.strip(str.toString()) : str.toString())
   const getStderr = (): string => output.stderr.map((b) => toString(b)).join('')
   const getStdout = (): string => output.stdout.map((b) => toString(b)).join('')
 
   const mock =
+    // eslint-disable-next-line @typescript-eslint/no-duplicate-type-constituents -- The union here is important for readability.
     (std: 'stderr' | 'stdout'): MockedStderr | MockedStdout =>
-    (str: string | Uint8Array, encoding?: ((err?: Error) => void) | BufferEncoding, cb?: (err?: Error) => void) => {
-      output[std].push(str)
+      (str: string | Uint8Array, encoding?: ((err?: Error) => void) | BufferEncoding, cb?: (err?: Error) => void) => {
+        output[std].push(str)
 
-      if (print) {
-        if (encoding !== null && typeof encoding === 'function') {
-          cb = encoding
-          encoding = undefined
-        }
+        if (isPrint) {
+          if (encoding !== null && typeof encoding === 'function') {
+            cb = encoding
+            encoding = undefined
+          }
 
-        originals[std].apply(process[std], [str, encoding, cb])
-      } else if (typeof cb === 'function') cb()
+          originals[std].apply(process[std], [str, encoding, cb])
+        } else if (typeof cb === 'function') cb()
 
-      return true
-    }
+        return true
+      }
 
   process.stdout.write = mock('stdout')
   process.stderr.write = mock('stderr')

@@ -2,7 +2,7 @@ import {Command, Errors, Flags} from '@oclif/core'
 import {bold} from 'ansis'
 import {expect} from 'chai'
 
-import {captureOutput} from '../src'
+import {captureOutput} from '../src/index.js'
 
 class MyCommand extends Command {
   static flags = {
@@ -75,6 +75,6 @@ describe('captureOutput', () => {
 
   it('should not strip ansi codes if stripAnsi is false', async () => {
     const {stdout} = await captureOutput(async () => MyCommand.run(['-c=stdout']), {stripAnsi: false})
-    expect(stdout).to.equal('\u001B[1mhello world!\u001B[22m\n')
+    expect(stdout).to.equal('\u{1B}[1mhello world!\u{1B}[22m\n')
   })
 })
