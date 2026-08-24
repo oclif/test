@@ -1,0 +1,44 @@
+{
+  "eslint.config.mjs": {
+    "import-x/no-anonymous-default-export": {
+      "count": 1
+    }
+  },
+  "src/index.ts": {
+    "@typescript-eslint/prefer-nullish-coalescing": {
+      "count": 1
+    },
+    "require-unicode-regexp": {
+      "count": 2
+    },
+    "unicorn/consistent-boolean-name": {
+      "count": 1
+    }
+  },
+  "test/fixtures/multi/src/commands/exit.js": {
+    "import-x/no-extraneous-dependencies": {
+      "count": 1
+    },
+    "unicorn/prefer-number-coercion": {
+      "count": 1
+    }
+  },
+  "test/fixtures/multi/src/commands/foo/bar.js": {
+    "import-x/no-extraneous-dependencies": {
+      "count": 1
+    }
+  },
+  "test/fixtures/single/dist/index.js": {
+    "import-x/no-extraneous-dependencies": {
+      "count": 1
+    }
+  },
+  "test/run-command.test.ts": {
+    "@typescript-eslint/no-shadow": {
+      "count": 1
+    },
+    "unicorn/no-unsafe-string-replacement": {
+      "count": 3
+    }
+  }
+}

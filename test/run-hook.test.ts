@@ -1,7 +1,7 @@
 import {expect} from 'chai'
 import {join} from 'node:path'
 
-import {runHook} from '../src'
+import {runHook} from '../src/index.js'
 
 // eslint-disable-next-line unicorn/prefer-module
 const root = join(__dirname, 'fixtures/multi')
