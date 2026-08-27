@@ -1,7 +1,7 @@
 import {Config, Errors, type Interfaces, run} from '@oclif/core'
 import ansis from 'ansis'
 import makeDebug from 'debug'
-import {dirname} from 'node:path'
+import path from 'node:path'
 
 const debug = makeDebug('oclif-test')
 
@@ -24,7 +24,7 @@ type MockedStderr = typeof process.stderr.write
 function traverseFilePathUntil(filename: string, predicate: (filename: string) => boolean): string {
   let current = filename
   while (!predicate(current)) {
-    current = dirname(current)
+    current = path.dirname(current)
   }
 
   return current
