@@ -1,12 +1,12 @@
 import {Config} from '@oclif/core'
 import {expect} from 'chai'
-import {join} from 'node:path'
+import path from 'node:path'
 
 import {runCommand} from '../src/index.js'
 
 describe('runCommand', () => {
   // eslint-disable-next-line unicorn/prefer-module
-  const root = join(__dirname, 'fixtures/multi')
+  const root = path.join(__dirname, 'fixtures/multi')
 
   it('should run a command', async () => {
     const {result, stdout} = await runCommand<{name: string}>(['foo:bar'], {root})
@@ -47,7 +47,7 @@ describe('runCommand', () => {
 
   describe('single command cli', () => {
     // eslint-disable-next-line unicorn/prefer-module
-    const root = join(__dirname, 'fixtures/single')
+    const root = path.join(__dirname, 'fixtures/single')
 
     it('should run a single command cli', async () => {
       const {result, stdout} = await runCommand<{name: string}>(['.'], {root})

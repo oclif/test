@@ -7,10 +7,11 @@
     "noUnusedParameters": true,
     "outDir": "./lib",
     "pretty": true,
-    "rootDirs": ["./src"],
+    "rootDir": "./src",
     "strict": true,
     "target": "es2022",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": ["node"]
   },
   "include": ["./src/**/*"]
 }
