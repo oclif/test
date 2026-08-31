@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/oclif/test/compare/4.2.0...5.0.0) (2026-08-31)
+
+
+* feat!: upgrade oclif/core to v5 @W-23512455@ ([97e758e](https://github.com/oclif/test/commit/97e758ec47a37f5f98dae99fee94b9992d2735f8))
+
+
+### BREAKING CHANGES
+
+* bump node engine to >=22.0.0
+
+
+
 # [4.2.0](https://github.com/oclif/test/compare/4.1.22...4.2.0) (2026-08-24)
 
 
