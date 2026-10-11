@@ -644,10 +644,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@oclif/core@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-5.0.1.tgz#55f7fa2c518116c0cd1bccbd0cd3d388fb314995"
-  integrity sha512-vJajq85xNxu6lheUEJ046lh9V61EAAGGDn1H+EOJzFL528iEr2iVY0OyHZjDmRteT/SvhlQbfhRpugKnCsT4yw==
+"@oclif/core@^5.1.2":
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-5.1.2.tgz#671d9905bd3deddcb86cd17d5e00668505b166fc"
+  integrity sha512-vgbWWFKjjsf7oAbJONFPnDkVNeqmy70DTBUjsprW/HRiTrXe8sMlFc0ih8GjpU+dn+m6V2ksaZjBV9HgnsmWVg==
   dependencies:
     ansi-escapes "^4.3.2"
     ansis "^3.17.0"
